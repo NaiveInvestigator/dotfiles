@@ -1,3 +1,4 @@
+-- Orignally from: https://medium.com/indian-coder/supercharge-flutter-with-neovim-a-complete-setup-guide-cbe5cbf5b073
 lvim.plugins = {
   -- for DAP support
   { "mfussenegger/nvim-dap" },
