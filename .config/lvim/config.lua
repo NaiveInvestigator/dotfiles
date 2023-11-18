@@ -27,8 +27,8 @@ lvim.plugins = {
                 type = "dart",
                 request = "launch",
                 name = "Launch flutter",
-                dartSdkPath = 'home/maelstrom/Development/flutter/bin/cache/dart-sdk/',
-                flutterSdkPath = 'home/maelstrom/Development/flutter/',
+                dartSdkPath = '~/Development/flutter/bin/cache/dart-sdk/',
+                flutterSdkPath = '~/Development/flutter/',
                 program = "${workspaceFolder}/lib/main.dart",
                 cwd = "${workspaceFolder}",
               }
@@ -55,3 +55,5 @@ lvim.plugins = {
     "dart-lang/dart-vim-plugin"
   },
 }
+-- git clone https://github.com/Nash0x7E2/awesome-flutter-snippets ~/.config/lvim/snippets/awesome-flutter-snippets
+require("luasnip/loaders/from_vscode").load { paths = { "~/.config/lvim/snippets/awesome-flutter-snippets" } }
