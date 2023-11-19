@@ -1,0 +1,3 @@
+#!/bin/bash
+spectacle --nonotify --region --background -o /tmp/screenshot.png && tesseract /tmp/screenshot.png stdout | wl-copy
+
