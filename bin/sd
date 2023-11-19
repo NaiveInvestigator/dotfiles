@@ -1,0 +1,2 @@
+cd ~/repos/stable-diffusion-webui/
+./webui.sh
