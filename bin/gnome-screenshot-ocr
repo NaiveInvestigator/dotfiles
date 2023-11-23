@@ -1,0 +1,2 @@
+#!/bin/bash
+gnome-screenshot -a -f /tmp/screenshot.png && tesseract /tmp/screenshot.png stdout | wl-copy
