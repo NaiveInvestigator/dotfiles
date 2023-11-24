@@ -54,6 +54,11 @@ lvim.plugins = {
   {
     "dart-lang/dart-vim-plugin"
   },
+  {
+    "ThePrimeagen/vim-be-good",
+    -- uncomment if plugins is not loading
+    -- lazy = false,
+  },
 }
 -- git clone https://github.com/Nash0x7E2/awesome-flutter-snippets ~/.config/lvim/snippets/awesome-flutter-snippets
 require("luasnip/loaders/from_vscode").load { paths = { "~/.config/lvim/snippets/awesome-flutter-snippets" } }
