@@ -16,7 +16,7 @@ lvim.plugins = {
           run_via_dap = false,
           register_configurations = function(_)
 
-             require("dap").adapters.dart = {
+            require("dap").adapters.dart = {
                 type = "executable",
                 command = vim.fn.stdpath("data") .. "/mason/bin/dart-debug-adapter",
                 args = {"flutter"}
@@ -57,12 +57,21 @@ lvim.plugins = {
   {
     "ThePrimeagen/vim-be-good",
     -- uncomment if plugins is not loading
-    -- lazy = false,
+   -- lazy = false,
   },
+  -- this is how to put a custom theme
+  -- {
+    -- "folke/tokyonight.nvim",
+    -- config = true,
+  -- },
 }
 -- git clone https://github.com/Nash0x7E2/awesome-flutter-snippets ~/.config/lvim/snippets/awesome-flutter-snippets
+-- for more info see : https://github.com/sambergo/lunarvim-snippet-examples
 require("luasnip/loaders/from_vscode").load { paths = { "~/.config/lvim/snippets/awesome-flutter-snippets" } }
 
 --custom statuscolumn
 vim.opt.numberwidth = 3
 vim.opt.statuscolumn = "%=%{v:virtnum < 1 ? (v:relnum ? v:relnum : v:lnum < 10 ? v:lnum . '  ' : v:lnum) : ''}%=%s"
+
+-- uncomment this if you want to use the custom theme
+-- lvim.colorscheme = "tokyonight"
