@@ -67,7 +67,7 @@ lvim.plugins = {
 }
 -- git clone https://github.com/Nash0x7E2/awesome-flutter-snippets ~/.config/lvim/snippets/awesome-flutter-snippets
 -- for more info see : https://github.com/sambergo/lunarvim-snippet-examples
-require("luasnip/loaders/from_vscode").load { paths = { "~/.config/lvim/snippets/awesome-flutter-snippets" } }
+require("luasnip.loaders.from_vscode").lazy_load( { paths = { "~/.config/lvim/snippets/awesome-flutter-snippets" } } )
 
 --custom statuscolumn
 vim.opt.numberwidth = 3
