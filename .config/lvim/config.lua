@@ -75,3 +75,6 @@ vim.opt.statuscolumn = "%=%{v:virtnum < 1 ? (v:relnum ? v:relnum : v:lnum < 10 ?
 
 -- uncomment this if you want to use the custom theme
 -- lvim.colorscheme = "tokyonight"
+
+-- makes dart format your code on save
+vim.g.dart_format_on_save = true
