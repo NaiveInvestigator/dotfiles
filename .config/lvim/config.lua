@@ -59,7 +59,12 @@ lvim.plugins = {
     -- uncomment if plugins is not loading
    -- lazy = false,
   },
-  -- this is how to put a custom theme
+  {
+    "iamcco/markdown-preview.nvim",
+    config = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+  },
   -- {
     -- "folke/tokyonight.nvim",
     -- config = true,
