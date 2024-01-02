@@ -35,6 +35,6 @@ alias code="vscodium"
 # alias code="vscodium-insiders"
 
 eval "$(starship init bash)"
-alias ls='exa --icons -F -H --group-directories-first --git -1'
+alias ls='eza --icons -F -H --group-directories-first --git -1'
 alias scrcpy='scrcpy -Sw'
 export PATH=~/.npm-global/bin:$PATH
