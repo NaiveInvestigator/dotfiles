@@ -70,7 +70,6 @@ lvim.plugins = {
     -- config = true,
   -- },
 }
--- git clone https://github.com/Nash0x7E2/awesome-flutter-snippets ~/.config/lvim/snippets/awesome-flutter-snippets
 -- for more info see : https://github.com/sambergo/lunarvim-snippet-examples
 require("luasnip.loaders.from_vscode").lazy_load( { paths = { "~/.config/lvim/snippets/awesome-flutter-snippets" } } )
 
@@ -83,3 +82,12 @@ vim.opt.statuscolumn = "%=%{v:virtnum < 1 ? (v:relnum ? v:relnum : v:lnum < 10 ?
 
 -- makes dart format your code on save
 vim.g.dart_format_on_save = true
+
+--Automatically clone flutter snippets
+local snippet_path = vim.fn.expand("~/.config/lvim/snippets/awesome-flutter-snippets")
+if vim.fn.isdirectory(snippet_path) == 0 then
+  local result = vim.fn.system({"git", "clone", "https://github.com/Nash0x7E2/awesome-flutter-snippets", snippet_path})
+  if result ~= 0 then
+    print("Flutter Snippets installation failed. Error code: " .. result)
+  end
+end
