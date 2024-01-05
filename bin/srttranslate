@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# https://gist.github.com/markshust/21f954828a4bcbc7106d5de2f3128857 
+# Requires translate-shell to be installed.
+# Get it on GitHub at: https://github.com/soimort/translate-shell
+
+# Parse command-line arguments
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        --file|-f ) file="$2"; shift ;;
+        --language|-l ) language="$2"; shift ;;
+        * ) echo "Unknown option: $1"; exit 1 ;;
+    esac
+    shift
+done
+
+# Check that required arguments are provided
+if [[ -z "$file" ]]; then
+    echo "Error: Input file not specified."
+    echo "Usage: $0 --file <input_file> --language <language_code>"
+    exit 1
+fi
+
+if [[ -z "$language" ]]; then
+    echo "Error: Language code not specified."
+    echo "Usage: $0 --file <input_file> --language <language_code>"
+    exit 1
+fi
+
+if [[ ! -f "$file" ]]; then
+    echo "Error: Input file '$file' does not exist or is not a regular file."
+    exit 1
+fi
+
+if ! [[ $language =~ ^[a-z]{2}$ ]]; then
+    echo "Error: Language code '$language' is not valid. Please use a two-letter language code (ISO 639-1)."
+    exit 1
+fi
+
+# Read input file and translate if necessary
+while read -r line; do
+    if [[ "$line" =~ [a-z] ]] ; then
+        translated=$(echo "$line" | trans -brief ":$language")
+
+        if [[ $? -ne 0 ]]; then
+            echo "Error: Translation failed for '$line'. Skipping."
+        else
+            echo "$translated" >> "${file%.*}.$language.srt"
+        fi
+    else
+        echo "$line" >> "${file%.*}.$language.srt"
+    fi
+done < "$file"
