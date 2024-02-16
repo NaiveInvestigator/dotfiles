@@ -75,9 +75,11 @@ lvim.plugins = {
 require("luasnip.loaders.from_vscode").lazy_load( { paths = { "~/.config/lvim/snippets/awesome-flutter-snippets" } } )
 
 --custom statuscolumn
-vim.opt.numberwidth = 3
-vim.opt.statuscolumn = "%=%{v:virtnum < 1 ? (v:relnum ? v:relnum : v:lnum < 10 ? v:lnum . '  ' : v:lnum) : ''}%=%s"
-
+-- vim.opt.numberwidth = 3
+-- vim.opt.statuscolumn = "%=%{v:virtnum < 1 ? (v:relnum ? v:relnum : v:lnum < 10 ? v:lnum . '  ' : v:lnum) : ''}%=%s"
+vim.opt.relativenumber = true -- relative line numbers
+vim.opt.wrap = true -- wrap lines
+vim.opt.clipboard = "unnamedplus" -- yang uses system clipboard
 -- uncomment this if you want to use the custom theme
 -- lvim.colorscheme = "tokyonight"
 
