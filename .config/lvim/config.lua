@@ -59,12 +59,6 @@ lvim.plugins = {
     -- uncomment if plugins is not loading
    -- lazy = false,
   },
-  {
-    "iamcco/markdown-preview.nvim",
-    config = function()
-      vim.fn["mkdp#util#install"]()
-    end,
-  },
   -- {
     -- "folke/tokyonight.nvim",
     -- config = true,
@@ -82,7 +76,7 @@ vim.opt.wrap = true -- wrap lines
 vim.opt.clipboard = "unnamedplus" -- yang uses system clipboard
 -- uncomment this if you want to use the custom theme
 -- lvim.colorscheme = "tokyonight"
-
+-- lvim.transparent_window = true
 -- makes dart format your code on save
 vim.g.dart_format_on_save = true
 
@@ -97,3 +91,15 @@ if vim.fn.isdirectory(snippet_path) == 0 then
     print("Flutter Snippets installation failed. Error code: " .. result)
   end
 end
+
+-- makes prettier as formatter
+-- see https://dev.to/datner/configuring-eslint-and-prettier-in-lunarvim-bonus-tailwindcss-2211
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  {
+    command = "prettier",
+    filetypes = { "typescript", "typescriptreact" },
+  },
+}
+
+require("lvim.lsp.manager").setup("emmet_ls")
