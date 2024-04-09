@@ -2,25 +2,31 @@
 lvim.plugins = {
   -- for DAP support
   { "mfussenegger/nvim-dap" },
+  -- for auto install mason packages
+  {
+    'WhoIsSethDaniel/mason-tool-installer.nvim',
+    opts = {
+      ensure_installed = { "prettier", "emmet_language_server", }
+    },
+  },
   {
     "akinsho/flutter-tools.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "stevearc/dressing.nvim" },
     config = function()
       require('flutter-tools').setup {
-       -- (uncomment below line for windows only)
-       -- flutter_path = "home/flutter/bin/flutter.bat",
+        -- (uncomment below line for windows only)
+        -- flutter_path = "home/flutter/bin/flutter.bat",
 
         debugger = {
           -- make these two params true to enable debug mode
           enabled = false,
           run_via_dap = false,
           register_configurations = function(_)
-
             require("dap").adapters.dart = {
-                type = "executable",
-                command = vim.fn.stdpath("data") .. "/mason/bin/dart-debug-adapter",
-                args = {"flutter"}
-              }
+              type = "executable",
+              command = vim.fn.stdpath("data") .. "/mason/bin/dart-debug-adapter",
+              args = { "flutter" }
+            }
 
             require("dap").configurations.dart = {
               {
@@ -56,37 +62,34 @@ lvim.plugins = {
   },
   {
     "ThePrimeagen/vim-be-good",
-    -- uncomment if plugins is not loading
-   -- lazy = false,
+    -- lazy = false,
   },
   -- {
-    -- "folke/tokyonight.nvim",
-    -- config = true,
+  -- "folke/tokyonight.nvim",
+  -- config = true,
   -- },
 }
--- git clone https://github.com/Nash0x7E2/awesome-flutter-snippets ~/.config/lvim/snippets/awesome-flutter-snippets
--- for more info see : https://github.com/sambergo/lunarvim-snippet-examples
-require("luasnip.loaders.from_vscode").lazy_load( { paths = { "~/.config/lvim/snippets/awesome-flutter-snippets" } } )
 
 --custom statuscolumn
 -- vim.opt.numberwidth = 3
 -- vim.opt.statuscolumn = "%=%{v:virtnum < 1 ? (v:relnum ? v:relnum : v:lnum < 10 ? v:lnum . '  ' : v:lnum) : ''}%=%s"
-vim.opt.relativenumber = true -- relative line numbers
-vim.opt.wrap = true -- wrap lines
-vim.opt.clipboard = "unnamedplus" -- yang uses system clipboard
+vim.opt.relativenumber = true     -- relative line numbers
+vim.opt.wrap = true               -- wrap lines
+vim.opt.clipboard = "unnamedplus" -- yank uses system clipboard
 -- uncomment this if you want to use the custom theme
 -- lvim.colorscheme = "tokyonight"
 -- lvim.transparent_window = true
 -- makes dart format your code on save
 vim.g.dart_format_on_save = true
-
+-- makes formatter on save
+lvim.format_on_save.enabled = true
 -- keybinds
 vim.api.nvim_set_keymap('n', '<C-z>', '<NOP>', { noremap = true, silent = true })
 
 --Automatically clone flutter snippets
 local snippet_path = vim.fn.expand("~/.config/lvim/snippets/awesome-flutter-snippets")
 if vim.fn.isdirectory(snippet_path) == 0 then
-  local result = vim.fn.system({"git", "clone", "https://github.com/Nash0x7E2/awesome-flutter-snippets", snippet_path})
+  local result = vim.fn.system({ "git", "clone", "https://github.com/Nash0x7E2/awesome-flutter-snippets", snippet_path })
   if result ~= 0 then
     print("Flutter Snippets installation failed. Error code: " .. result)
   end
@@ -94,12 +97,15 @@ end
 
 -- makes prettier as formatter
 -- see https://dev.to/datner/configuring-eslint-and-prettier-in-lunarvim-bonus-tailwindcss-2211
-local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup {
+require "lvim.lsp.null-ls.formatters".setup {
   {
     command = "prettier",
-    filetypes = { "typescript", "typescriptreact" },
+    filetypes = { "typescript", "typescriptreact", "html" },
   },
 }
 
-require("lvim.lsp.manager").setup("emmet_ls")
+-- git clone https://github.com/Nash0x7E2/awesome-flutter-snippets ~/.config/lvim/snippets/awesome-flutter-snippets
+-- for more info see : https://github.com/sambergo/lunarvim-snippet-examples
+require("luasnip.loaders.from_vscode").lazy_load({ paths = { "~/.config/lvim/snippets/awesome-flutter-snippets" } })
+
+require("lvim.lsp.manager").setup("emmet_language_server")
