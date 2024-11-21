@@ -1,5 +1,5 @@
 {
   "scheme": "dark",
-  "type": "image",
-  "base_color": null
+  "type": "color",
+  "base_color": "000000"
 }
