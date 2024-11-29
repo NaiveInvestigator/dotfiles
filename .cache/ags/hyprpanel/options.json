@@ -1,0 +1,98 @@
+{
+  "bar.customModules.updates.pollingInterval": 1440000,
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "power",
+        "workspaces",
+        "windowtitle",
+        "netstat"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "ram",
+        "cpu",
+        "volume",
+        "network",
+        "battery",
+        "systray",
+        "clock",
+        "notifications"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "menus.media.hideAlbum": true,
+  "tear": true,
+  "theme.bar.scaling": 85,
+  "scalingPriority": "hyprland",
+  "bar.customModules.netstat.labelType": "full",
+  "theme.notification.scaling": 85,
+  "theme.osd.scaling": 85,
+  "theme.bar.menus.menu.dashboard.scaling": 85,
+  "theme.bar.menus.menu.dashboard.confirmation_scaling": 85,
+  "theme.bar.menus.menu.media.scaling": 85,
+  "theme.bar.menus.menu.volume.scaling": 100,
+  "theme.bar.menus.menu.network.scaling": 100,
+  "theme.bar.menus.menu.bluetooth.scaling": 100,
+  "theme.bar.menus.menu.battery.scaling": 100,
+  "theme.font.name": "JetBrainsMono Nerd Font Propo",
+  "theme.matugen": true,
+  "wallpaper.image": "/home/maelstrom/Pictures/Final_Fantasy_VII_Remake_2017_01_31_17_001.0.jpg",
+  "bar.customModules.storage.labelType": "used/total",
+  "bar.customModules.cpuTemp.unit": "metric",
+  "theme.bar.buttons.modules.cpu.enableBorder": false,
+  "theme.bar.buttons.style": "default",
+  "theme.bar.transparent": true,
+  "theme.bar.border_radius": "0.4em",
+  "theme.bar.buttons.radius": "1.0em",
+  "theme.bar.buttons.innerRadiusMultiplier": "0.4",
+  "menus.power.lowBatteryNotification": true,
+  "menus.clock.weather.location": "Dhaka, Bangladesh",
+  "bar.windowtitle.truncation": true,
+  "bar.network.truncation": false,
+  "theme.bar.floating": false,
+  "theme.matugen_settings.scheme_type": "fruit-salad",
+  "theme.bar.menus.menu.media.card.color": "#202c2f",
+  "wallpaper.enable": true,
+  "bar.customModules.ram.labelType": "used/total",
+  "theme.matugen_settings.mode": "dark",
+  "theme.matugen_settings.contrast": 0.5,
+  "menus.clock.weather.key": "93df8a6ff60148c98e685706242611",
+  "menus.clock.weather.unit": "metric",
+  "theme.bar.buttons.workspaces.enableBorder": false,
+  "bar.workspaces.showAllActive": true,
+  "bar.workspaces.show_icons": true,
+  "theme.matugen_settings.variation": "standard_1"
+}
