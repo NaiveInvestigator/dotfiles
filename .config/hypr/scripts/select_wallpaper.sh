@@ -7,4 +7,6 @@ if [[ $file == "" ]]; then
 fi
 
 # ~/.config/eww/scripts/material.py --image "$file"
-agsv1 -r "setWallpaper('$file')"
+# agsv1 -r "setWallpaper('$file')"
+echo $file
+hyprpanel setWallpaper "$file"
