@@ -6,19 +6,19 @@
  https://github.com/lassekongo83/adw-colors/blob/main/HOWTO.md
 */
 
-@define-color window_bg_color #1e100f;
-@define-color window_fg_color #ffffff;
-@define-color view_bg_color #1e100f;
+@define-color window_bg_color {{colors.surface_dim.default.hex}};
+@define-color window_fg_color {{colors.on_surface.default.hex}};
+@define-color view_bg_color {{colors.surface.default.hex}};
 @define-color view_fg_color @window_fg_color;
-@define-color accent_bg_color #ffb3af;
-@define-color accent_fg_color #2d0003;
+@define-color accent_bg_color {{colors.primary_fixed_dim.default.hex}};
+@define-color accent_fg_color {{colors.on_primary_fixed.default.hex}};
 @define-color accent_color @accent_bg_color;
 @define-color headerbar_bg_color @window_bg_color;
 @define-color headerbar_fg_color @window_fg_color;
 @define-color headerbar_backdrop_color @window_bg_color;
 @define-color headerbar_border_color @window_bg_color;
 @define-color headerbar_shade_color @window_bg_color;
-@define-color card_bg_color #1e100f;
+@define-color card_bg_color {{colors.surface.default.hex}};
 @define-color card_fg_color @window_fg_color;
 @define-color card_shade_color rgba(0, 0, 0, 0.07);
 @define-color popover_bg_color @window_bg_color;
@@ -35,18 +35,18 @@
 @define-color secondary_sidebar_shade_color rgba(0,0,0,0.25);
 @define-color secondary_sidebar_border_color @window_bg_color;
 
-@define-color warning_bg_color #cc7f2b;
-@define-color warning_fg_color #000000;
-@define-color warning_color #ffd4b0;
-@define-color error_bg_color #ff5449;
-@define-color error_fg_color #000000;
-@define-color error_color #ffd2cc;
-@define-color success_bg_color #dd706d;
-@define-color success_fg_color #000000;
-@define-color success_color #ffd2cf;
-@define-color destructive_bg_color #ff5449;
-@define-color destructive_fg_color #000000;
-@define-color destructive_color #ffd2cc;
+@define-color warning_bg_color {{colors.tertiary_container.default.hex}};
+@define-color warning_fg_color {{colors.on_tertiary_container.default.hex}};
+@define-color warning_color {{colors.tertiary.default.hex}};
+@define-color error_bg_color {{colors.error_container.default.hex}};
+@define-color error_fg_color {{colors.on_error_container.default.hex}};
+@define-color error_color {{colors.error.default.hex}};
+@define-color success_bg_color {{colors.secondary_container.default.hex}};
+@define-color success_fg_color {{colors.on_secondary_container.default.hex}};
+@define-color success_color {{colors.secondary.default.hex}};
+@define-color destructive_bg_color {{colors.error_container.default.hex}};
+@define-color destructive_fg_color {{colors.on_error_container.default.hex}};
+@define-color destructive_color {{colors.error.default.hex}};
 
 
 /*
