@@ -186,9 +186,6 @@
                     "hideWhenZeroUnread": false,
                     "id": "NotificationHistory",
                     "showUnreadBadge": true
-                },
-                {
-                    "id": "WallpaperSelector"
                 }
             ]
         }
