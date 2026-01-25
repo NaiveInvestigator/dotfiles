@@ -1,3 +1,20 @@
+[config]
+
+[templates]
+
+# User-defined templates
+# Add your custom templates below
+# Example:
+# [templates.myapp]
+# input_path = "~/.config/noctalia/templates/myapp.css"
+# output_path = "~/.config/myapp/theme.css"
+# post_hook = "myapp --reload-theme"
+
+# Remove this section and add your own templates
+#[templates.placeholder]
+#input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/noctalia.json"
+#output_path = "/home/maelstrom/.cache/noctalia/placeholder.json"
+
 [templates.hyprland]
 input_path = '~/.config/matugen/templates/hyprland-colors.conf'
 output_path = '~/.config/hypr/config/colors.conf'
@@ -14,10 +31,6 @@ output_path = '~/.cache/wal/base46-dark.lua'
 [templates.nvimlight]
 input_path = '~/.config/nvim/pywal/matugen.lua'
 output_path = '~/.cache/wal/base46-light.lua'
-
-[templates.kitty]
-input_path = '~/.config/matugen/templates/kitty-colors.conf'
-output_path = '~/.config/kitty/colors.conf'
 
 [templates.gtk3]
 input_path = '~/.config/matugen/templates/gtk-colors-new.css'
@@ -68,4 +81,3 @@ blend = true
 [config.custom_colors.white]
 color = "#FFFFFF"
 blend = true
-
