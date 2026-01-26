@@ -117,7 +117,7 @@
                     "showMemoryAsPercent": true,
                     "showMemoryUsage": true,
                     "showNetworkStats": true,
-                    "showSwapUsage": false,
+                    "showSwapUsage": true,
                     "useMonospaceFont": true,
                     "usePrimaryColor": false
                 }
@@ -519,7 +519,7 @@
         "wifiDetailsViewMode": "grid"
     },
     "wallpaper": {
-        "automationEnabled": false,
+        "automationEnabled": true,
         "directory": "/home/maelstrom/Pictures",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
