@@ -79,13 +79,8 @@
             ],
             "left": [
                 {
-                    "colorizeDistroLogo": false,
-                    "colorizeSystemIcon": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "noctalia",
-                    "id": "ControlCenter",
-                    "useDistroLogo": false
+                    "colorName": "error",
+                    "id": "SessionMenu"
                 },
                 {
                     "characterCount": 2,
@@ -96,7 +91,7 @@
                     "hideUnoccupied": false,
                     "iconScale": 0.8,
                     "id": "Workspace",
-                    "labelMode": "index",
+                    "labelMode": "none",
                     "showApplications": false,
                     "showLabelsOnlyWhenOccupied": true,
                     "unfocusedIconsOpacity": 1
@@ -108,7 +103,7 @@
                     "maxWidth": 145,
                     "scrollingMode": "hover",
                     "showIcon": true,
-                    "useFixedWidth": false
+                    "useFixedWidth": true
                 },
                 {
                     "compactMode": false,
@@ -163,12 +158,12 @@
                     "warningThreshold": 30
                 },
                 {
-                    "customFont": "",
-                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "customFont": "JetBrainsMono Nerd Font",
+                    "formatHorizontal": "hh:mm AP ddd, MMM dd",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
-                    "useCustomFont": false,
+                    "useCustomFont": true,
                     "usePrimaryColor": false
                 },
                 {
@@ -192,7 +187,7 @@
     },
     "brightness": {
         "brightnessStep": 5,
-        "enableDdcSupport": false,
+        "enableDdcSupport": true,
         "enforceMinimum": true
     },
     "calendar": {
@@ -236,7 +231,7 @@
                 "id": "audio-card"
             },
             {
-                "enabled": false,
+                "enabled": true,
                 "id": "brightness-card"
             },
             {
@@ -283,7 +278,7 @@
     },
     "desktopWidgets": {
         "enabled": false,
-        "gridSnap": false,
+        "gridSnap": true,
         "monitorWidgets": [
             {
                 "name": "eDP-1",
@@ -314,7 +309,7 @@
         "allowPanelsOnScreenWithoutBar": true,
         "animationDisabled": false,
         "animationSpeed": 1,
-        "avatarImage": "/home/maelstrom/Pictures/Cloud.jpg",
+        "avatarImage": "/home/maelstrom/.config/noctalia/profile.png",
         "boxRadiusRatio": 1,
         "compactLockScreen": false,
         "dimmerOpacity": 0.2,
@@ -366,7 +361,7 @@
         "bluetoothDetailsViewMode": "grid",
         "bluetoothHideUnnamedDevices": false,
         "bluetoothRssiPollIntervalMs": 10000,
-        "bluetoothRssiPollingEnabled": false,
+        "bluetoothRssiPollingEnabled": true,
         "wifiDetailsViewMode": "grid",
         "wifiEnabled": true
     },
@@ -423,7 +418,7 @@
     },
     "sessionMenu": {
         "countdownDuration": 10000,
-        "enableCountdown": true,
+        "enableCountdown": false,
         "largeButtonsLayout": "grid",
         "largeButtonsStyle": false,
         "position": "center",
@@ -504,10 +499,6 @@
             {
                 "enabled": true,
                 "id": "zenBrowser"
-            },
-            {
-                "enabled": true,
-                "id": "discord"
             }
         ],
         "enableUserTheming": true
@@ -516,9 +507,9 @@
         "bluetoothDetailsViewMode": "grid",
         "bluetoothHideUnnamedDevices": false,
         "boxBorderEnabled": false,
-        "fontDefault": "DejaVu LGC Sans",
+        "fontDefault": "JetBrainsMono Nerd Font",
         "fontDefaultScale": 1,
-        "fontFixed": "monospace",
+        "fontFixed": "JetBrainsMono Nerd Font Mono",
         "fontFixedScale": 1,
         "networkPanelView": "wifi",
         "panelBackgroundOpacity": 0.93,
