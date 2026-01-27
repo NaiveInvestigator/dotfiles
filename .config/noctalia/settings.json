@@ -159,7 +159,7 @@
                 },
                 {
                     "customFont": "JetBrainsMono Nerd Font",
-                    "formatHorizontal": "hh:mm AP ddd, MMM dd",
+                    "formatHorizontal": "hh:mm:ss AP ddd, MMM dd",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
