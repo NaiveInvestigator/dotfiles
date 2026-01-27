@@ -79,7 +79,7 @@
             ],
             "left": [
                 {
-                    "colorName": "error",
+                    "colorName": "primary",
                     "id": "SessionMenu"
                 },
                 {
@@ -170,7 +170,7 @@
                     "blacklist": [
                     ],
                     "colorizeIcons": false,
-                    "drawerEnabled": true,
+                    "drawerEnabled": false,
                     "hidePassive": false,
                     "id": "Tray",
                     "pinned": [
@@ -544,7 +544,7 @@
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "",
+        "wallhavenQuery": "unsplash",
         "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",
