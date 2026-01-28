@@ -5,7 +5,7 @@
         "customLaunchPrefix": "",
         "customLaunchPrefixEnabled": false,
         "enableClipPreview": true,
-        "enableClipboardHistory": false,
+        "enableClipboardHistory": true,
         "enableSettingsSearch": true,
         "iconMode": "native",
         "ignoreMouseInput": false,
@@ -85,14 +85,18 @@
                 {
                     "characterCount": 2,
                     "colorizeIcons": false,
+                    "emptyColor": "secondary",
                     "enableScrollWheel": true,
+                    "focusedColor": "primary",
                     "followFocusedScreen": false,
                     "groupedBorderOpacity": 1,
                     "hideUnoccupied": false,
                     "iconScale": 0.8,
                     "id": "Workspace",
                     "labelMode": "none",
+                    "occupiedColor": "secondary",
                     "showApplications": false,
+                    "showBadge": true,
                     "showLabelsOnlyWhenOccupied": true,
                     "unfocusedIconsOpacity": 1
                 },
@@ -132,11 +136,11 @@
                 },
                 {
                     "displayMode": "onhover",
-                    "id": "Bluetooth"
+                    "id": "Brightness"
                 },
                 {
                     "displayMode": "onhover",
-                    "id": "Brightness"
+                    "id": "Bluetooth"
                 },
                 {
                     "displayMode": "alwaysShow",
@@ -309,6 +313,7 @@
         "allowPanelsOnScreenWithoutBar": true,
         "animationDisabled": false,
         "animationSpeed": 1,
+        "autoStartAuth": false,
         "avatarImage": "/home/maelstrom/.config/noctalia/profile.png",
         "boxRadiusRatio": 1,
         "compactLockScreen": false,
