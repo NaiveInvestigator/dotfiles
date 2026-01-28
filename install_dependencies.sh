@@ -3,3 +3,5 @@ sudo pacman -S cliphist noctalia-shell swww wl-clipboard grimblast slurp tessera
 echo -e "\e[32mInstalled Essentials\e[0m"
 echo -e "\e[35mInstalling nice to have / cool stuff\e[0m"
 sudo pacman -S easyeffects mpv mpv-mpris yt-dlp podman podman-docker distrobox heroic-games-launcher-bin mangohud wine gamemode gamescope protonplus btrfs-assistant tailscale spoofdpi seahorse foliate filelight
+echo -e "\e[35mInstalling Useful AUR packages\e[0m"
+paru paccache-hook
