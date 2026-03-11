@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "Usage: $0 <youtube-url>"
+    exit 1
+fi
+
+cd "$(mktemp -d)" || exit 1
+yt-dlp --skip-download --write-auto-subs -o "temp" --sub-format srt "$1"
+sub_fix temp.en.srt fixed.en.srt
+mpv --sub-file=fixed.en.srt "$1"
+

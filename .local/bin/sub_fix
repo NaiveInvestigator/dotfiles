@@ -1,0 +1,83 @@
+#!/usr/bin/env python3
+import re
+import argparse
+from datetime import datetime, timedelta
+
+
+def parseSRT(content):
+    content = content.rstrip("\n")
+    blocks = content.split("\n\n")
+    subtitles = []
+
+    for block in blocks:
+        lines = block.split("\n")
+        matches = re.search(
+            r'(\d{2}:\d{2}:\d{2},\d{3}) --> (\d{2}:\d{2}:\d{2},\d{3})',
+            lines[1]
+        )
+
+        subtitles.append({
+            "index": int(lines[0]),
+            "start": matches.group(1),
+            "end": matches.group(2),
+            "text": "\n".join(lines[2:])
+        })
+
+    return subtitles
+
+
+def parse_time(t):
+    return datetime.strptime(t, "%H:%M:%S,%f")
+
+
+def format_time(t):
+    return t.strftime("%H:%M:%S,%f")[:-3]
+
+
+def adjustSubtitles(subtitles):
+    for i in range(len(subtitles) - 1):
+        current_end_time = parse_time(subtitles[i]["end"])
+        next_start_time = parse_time(subtitles[i + 1]["start"])
+
+        if current_end_time >= next_start_time:
+            new_end = next_start_time - timedelta(milliseconds=1)
+            subtitles[i]["end"] = format_time(new_end)
+
+    return subtitles
+
+
+def buildSRT(subtitles):
+    content = ""
+
+    for subtitle in subtitles:
+        content += str(subtitle["index"]) + "\n"
+        content += subtitle["start"] + " --> " + subtitle["end"] + "\n"
+
+        if subtitle["text"] != "":
+            content += subtitle["text"] + "\n"
+
+        content += "\n"
+
+    return content
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Fix overlapping SRT subtitles")
+    parser.add_argument("input", help="Input SRT file")
+    parser.add_argument("output", help="Output SRT file")
+
+    args = parser.parse_args()
+
+    with open(args.input, "r", encoding="utf-8") as f:
+        rawSRT = f.read()
+
+    parsed = parseSRT(rawSRT)
+    adjusted = adjustSubtitles(parsed)
+    fixedSRT = buildSRT(adjusted)
+
+    with open(args.output, "w", encoding="utf-8") as f:
+        f.write(fixedSRT)
+
+
+if __name__ == "__main__":
+    main()
