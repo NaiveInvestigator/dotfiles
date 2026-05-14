@@ -16,8 +16,8 @@
 #output_path = "/home/maelstrom/.cache/noctalia/placeholder.json"
 
 [templates.hyprland]
-input_path = '~/.config/matugen/templates/hyprland-colors.conf'
-output_path = '~/.config/hypr/config/colors.conf'
+input_path = '~/.config/matugen/templates/hyprland-colors.lua'
+output_path = '~/.config/hypr/config/colors.lua'
 post_hook = 'hyprctl reload'
 
 [templates.fastfetch]
