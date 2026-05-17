@@ -27,8 +27,8 @@ hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("grimblast --freeze copy area
 hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd("grimblast --freeze save area - | tesseract stdin stdout | wl-copy"))
 
 -- ======= Window Cycling =======
--- fix this
--- hl.bind("ALT + TAB",            hl.dsp.focus({ cyclenext = true }))
+-- hl.bind("ALT + TAB",            hl.dsp.window.cycle_next())
+hl.bind("ALT + TAB",            hl.dsp.focus({ urgent_or_last = true }))
 -- hl.bind("ALT + SHIFT + TAB",   hl.dsp.focus({ cyclenext = true, prev = true }))
 
 -- ======= Grouping Windows =======

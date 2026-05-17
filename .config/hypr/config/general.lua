@@ -17,8 +17,6 @@ hl.config({
             active_border   = "rgba(ff5e81ac)",
             inactive_border = "rgba(66333333)",
             active_border   = primary, -- Sources color from eww
-            -- fix this
-            -- apply_sens_to_raw = 0, -- whether to apply the sensitivity to raw input (e.g. used by games where you aim using your mouse)
         },
     },
 })
