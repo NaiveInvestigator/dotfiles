@@ -8,7 +8,9 @@
         "customLaunchPrefixEnabled": false,
         "density": "comfortable",
         "enableClipPreview": true,
+        "enableClipboardChips": true,
         "enableClipboardHistory": true,
+        "enableClipboardSmartIcons": true,
         "enableSessionSearch": true,
         "enableSettingsSearch": true,
         "enableWindowsSearch": true,
@@ -23,7 +25,6 @@
         "showIconBackground": false,
         "sortByMostUsed": true,
         "terminalCommand": "xterm -e",
-        "useApp2Unit": false,
         "viewMode": "list"
     },
     "audio": {
@@ -31,6 +32,7 @@
         ],
         "preferredPlayer": "",
         "spectrumFrameRate": 30,
+        "spectrumMirrored": true,
         "visualizerType": "linear",
         "volumeFeedback": true,
         "volumeFeedbackSoundFile": "",
@@ -47,7 +49,7 @@
         "contentPadding": 2,
         "density": "comfortable",
         "displayMode": "always_visible",
-        "floating": true,
+        "enableExclusionZoneInset": true,
         "fontScale": 1,
         "frameRadius": 12,
         "frameThickness": 8,
@@ -104,7 +106,7 @@
                     "emptyColor": "secondary",
                     "enableScrollWheel": true,
                     "focusedColor": "primary",
-                    "followFocusedScreen": false,
+                    "followFocusedScreen": true,
                     "fontWeight": "bold",
                     "groupedBorderOpacity": 1,
                     "hideUnoccupied": false,
@@ -114,17 +116,19 @@
                     "occupiedColor": "secondary",
                     "pillSize": 0.6,
                     "showApplications": false,
+                    "showApplicationsHover": false,
                     "showBadge": true,
                     "showLabelsOnlyWhenOccupied": true,
                     "unfocusedIconsOpacity": 1
                 },
                 {
-                    "colorizeIcons": false,
+                    "colorizeIcons": true,
                     "hideMode": "hidden",
                     "id": "ActiveWindow",
                     "maxWidth": 145,
                     "scrollingMode": "hover",
                     "showIcon": true,
+                    "showText": true,
                     "textColor": "none",
                     "useFixedWidth": true
                 },
@@ -249,6 +253,7 @@
         "monitorForColors": "",
         "predefinedScheme": "Noctalia (default)",
         "schedulingMode": "off",
+        "syncGsettings": true,
         "useWallpaperColors": true
     },
     "controlCenter": {
@@ -320,9 +325,15 @@
                 "name": "eDP-1",
                 "widgets": [
                     {
-                        "id": "Weather",
+                        "colorName": "primary",
+                        "height": 72,
+                        "hideWhenIdle": true,
+                        "id": "AudioVisualizer",
+                        "roundedCorners": true,
                         "showBackground": true,
-                        "x": 20,
+                        "visualizerType": "linear",
+                        "width": 320,
+                        "x": 40,
                         "y": 980
                     }
                 ]
@@ -336,7 +347,7 @@
         "colorizeIcons": true,
         "deadOpacity": 0.6,
         "displayMode": "always_visible",
-        "dockType": "static",
+        "dockType": "attached",
         "enabled": false,
         "floatingRatio": 1,
         "groupApps": true,
@@ -347,8 +358,10 @@
         "indicatorColor": "primary",
         "indicatorOpacity": 0.6,
         "indicatorThickness": 3,
+        "launcherIcon": "",
         "launcherIconColor": "none",
         "launcherPosition": "end",
+        "launcherUseDistroLogo": false,
         "monitors": [
         ],
         "onlySameOutput": true,
@@ -376,7 +389,7 @@
         "enableBlurBehind": true,
         "enableLockScreenCountdown": false,
         "enableLockScreenMediaControls": false,
-        "enableShadows": false,
+        "enableShadows": true,
         "forceBlackScreenCorners": false,
         "iRadiusRatio": 1,
         "keybinds": {
@@ -423,9 +436,11 @@
         "showHibernateOnLockScreen": false,
         "showScreenCorners": false,
         "showSessionButtonsOnLockScreen": true,
+        "smoothScrollEnabled": true,
         "telemetryEnabled": false
     },
     "hooks": {
+        "colorGeneration": "",
         "darkModeChange": "",
         "enabled": false,
         "performanceModeDisabled": "",
@@ -452,20 +467,21 @@
     },
     "location": {
         "analogClockInCalendar": true,
+        "autoLocate": true,
         "firstDayOfWeek": -1,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
-        "name": "Dhaka",
+        "name": "",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": false,
         "use12hourFormat": true,
         "useFahrenheit": false,
         "weatherEnabled": true,
-        "weatherShowEffects": true
+        "weatherShowEffects": true,
+        "weatherTaliaMascotAlways": false
     },
     "network": {
-        "airplaneModeEnabled": false,
         "bluetoothAutoConnect": true,
         "bluetoothDetailsViewMode": "grid",
         "bluetoothHideUnnamedDevices": false,
@@ -473,8 +489,7 @@
         "bluetoothRssiPollingEnabled": true,
         "disableDiscoverability": false,
         "networkPanelView": "wifi",
-        "wifiDetailsViewMode": "list",
-        "wifiEnabled": true
+        "wifiDetailsViewMode": "list"
     },
     "nightLight": {
         "autoSchedule": true,
@@ -536,7 +551,8 @@
         "overlayLayer": true
     },
     "plugins": {
-        "autoUpdate": true
+        "autoUpdate": true,
+        "notifyUpdates": true
     },
     "sessionMenu": {
         "countdownDuration": 10000,
@@ -605,7 +621,7 @@
         "showHeader": true,
         "showKeybinds": true
     },
-    "settingsVersion": 57,
+    "settingsVersion": 59,
     "systemMonitor": {
         "batteryCriticalThreshold": 5,
         "batteryWarningThreshold": 20,
@@ -634,10 +650,6 @@
             {
                 "enabled": true,
                 "id": "btop"
-            },
-            {
-                "enabled": true,
-                "id": "zenBrowser"
             }
         ],
         "enableUserTheming": true
@@ -658,7 +670,7 @@
     },
     "wallpaper": {
         "automationEnabled": true,
-        "directory": "/home/maelstrom/Pictures",
+        "directory": "/home/maelstrom/Pictures/static_wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
@@ -666,6 +678,7 @@
         "fillColor": "#000000",
         "fillMode": "crop",
         "hideWallpaperFilenames": true,
+        "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
         ],
         "overviewBlur": 0.4,
@@ -680,15 +693,23 @@
         "sortOrder": "name",
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
-        "transitionType": "random",
+        "transitionType": [
+            "fade",
+            "disc",
+            "stripes",
+            "wipe",
+            "pixelate",
+            "honeycomb"
+        ],
+        "useOriginalImages": false,
         "useSolidColor": false,
         "useWallhaven": false,
         "viewMode": "browse",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
-        "wallhavenPurity": "100",
-        "wallhavenQuery": "ford mustang",
+        "wallhavenPurity": "000",
+        "wallhavenQuery": "star rail",
         "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",
