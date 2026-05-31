@@ -650,6 +650,14 @@
             {
                 "enabled": true,
                 "id": "btop"
+            },
+            {
+                "enabled": true,
+                "id": "zenBrowser"
+            },
+            {
+                "enabled": true,
+                "id": "kcolorscheme"
             }
         ],
         "enableUserTheming": true
