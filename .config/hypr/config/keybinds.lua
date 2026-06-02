@@ -28,13 +28,12 @@ hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd("grimblast --freeze save area
 
 -- ======= Window Cycling =======
 -- hl.bind("ALT + TAB",            hl.dsp.window.cycle_next())
-hl.bind("ALT + TAB",            hl.dsp.focus({ urgent_or_last = true }))
+hl.bind("ALT + TAB",            hl.dsp.focus({ last = true }))
 -- hl.bind("ALT + SHIFT + TAB",   hl.dsp.focus({ cyclenext = true, prev = true }))
 
 -- ======= Grouping Windows =======
--- fix this
--- hl.bind(mainMod .. " + K",      hl.dsp.window.togglegroup(),                                                          { description = "Toggles current window group mode (ungroup all related)" })
--- hl.bind(mainMod .. " + Tab",    hl.dsp.window.changegroupactive({ direction = "f" }),                                  { description = "Switches to the next window in the group" })
+hl.bind(mainMod .. " + K",   hl.dsp.group.toggle(),                        { description = "Toggle group" })
+hl.bind(mainMod .. " + Tab", hl.dsp.group.next(),                          { description = "Next window in group" })
 
 -- ======= Toggle Gaps =======
 hl.bind(mainMod .. " + SHIFT + G", hl.dsp.exec_cmd('hyprctl --batch "keyword general:gaps_out 5;keyword general:gaps_in 3"'), { description = "Set CachyOS default gaps" })
@@ -78,32 +77,15 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }), { descript
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }),    { description = "Move focus upwards" })
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }),  { description = "Move focus downwards" })
 
--- Resize windows — submap
--- https://wiki.hyprland.org/Configuring/Binds/#submaps
--- hl.bind(mainMod .. " + R", hl.dsp.submap("resize"), { description = "Activates window resizing mode" })
--- hl.submap("resize", function()
---     hl.bind("right",  hl.dsp.window.resizeactive({  15,   0 }), { description = "Resize to the right (resizing mode)" })
---     hl.bind("left",   hl.dsp.window.resizeactive({ -15,   0 }), { description = "Resize to the left (resizing mode)" })
---     hl.bind("up",     hl.dsp.window.resizeactive({   0, -15 }), { description = "Resize upwards (resizing mode)" })
---     hl.bind("down",   hl.dsp.window.resizeactive({   0,  15 }), { description = "Resize downwards (resizing mode)" })
---     hl.bind("l",      hl.dsp.window.resizeactive({  15,   0 }), { description = "Resize to the right (resizing mode)" })
---     hl.bind("h",      hl.dsp.window.resizeactive({ -15,   0 }), { description = "Resize to the left (resizing mode)" })
---     hl.bind("k",      hl.dsp.window.resizeactive({   0, -15 }), { description = "Resize upwards (resizing mode)" })
---     hl.bind("j",      hl.dsp.window.resizeactive({   0,  15 }), { description = "Resize downwards (resizing mode)" })
---     hl.bind("escape", hl.dsp.submap("reset"),                   { description = "Ends window resizing mode" })
--- end)
---
 -- Quick resize with keyboard
--- !!! added mainMod here because CTRL + SHIFT is used for word selection in various text editors
--- fix this
--- hl.bind(mainMod .. " + CTRL + SHIFT + right", hl.dsp.window.resizeactive({  15,   0 }), { description = "Resize to the right" })
--- hl.bind(mainMod .. " + CTRL + SHIFT + left",  hl.dsp.window.resizeactive({ -15,   0 }), { description = "Resize to the left" })
--- hl.bind(mainMod .. " + CTRL + SHIFT + up",    hl.dsp.window.resizeactive({   0, -15 }), { description = "Resize upwards" })
--- hl.bind(mainMod .. " + CTRL + SHIFT + down",  hl.dsp.window.resizeactive({   0,  15 }), { description = "Resize downwards" })
--- hl.bind(mainMod .. " + CTRL + SHIFT + l",     hl.dsp.window.resizeactive({  15,   0 }), { description = "Resize to the right" })
--- hl.bind(mainMod .. " + CTRL + SHIFT + h",     hl.dsp.window.resizeactive({ -15,   0 }), { description = "Resize to the left" })
--- hl.bind(mainMod .. " + CTRL + SHIFT + k",     hl.dsp.window.resizeactive({   0, -15 }), { description = "Resize upwards" })
--- hl.bind(mainMod .. " + CTRL + SHIFT + j",     hl.dsp.window.resizeactive({   0,  15 }), { description = "Resize downwards" })
+hl.bind(mainMod .. " + CTRL + SHIFT + right", hl.dsp.window.resize({ x =  15, y =   0, relative = true }))
+hl.bind(mainMod .. " + CTRL + SHIFT + left",  hl.dsp.window.resize({ x = -15, y =   0, relative = true }))
+hl.bind(mainMod .. " + CTRL + SHIFT + up",    hl.dsp.window.resize({ x =   0, y = -15, relative = true }))
+hl.bind(mainMod .. " + CTRL + SHIFT + down",  hl.dsp.window.resize({ x =   0, y =  15, relative = true }))
+hl.bind(mainMod .. " + CTRL + SHIFT + l",     hl.dsp.window.resize({ x =  15, y =   0, relative = true }))
+hl.bind(mainMod .. " + CTRL + SHIFT + h",     hl.dsp.window.resize({ x = -15, y =   0, relative = true }))
+hl.bind(mainMod .. " + CTRL + SHIFT + k",     hl.dsp.window.resize({ x =   0, y = -15, relative = true }))
+hl.bind(mainMod .. " + CTRL + SHIFT + j",     hl.dsp.window.resize({ x =   0, y =  15, relative = true }))
 
 -- Resize/move window with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true }) -- Resize the window
