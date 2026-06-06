@@ -26,7 +26,4 @@ hl.on("hyprland.start", function()
 
     -- Idle configuration
     hl.exec_cmd(idlehandler)
-
-    -- recorder
-    hl.exec_cmd("tmux new -d -s 0 \"~/repos/StreaMonitor/run.sh\"")
 end)
