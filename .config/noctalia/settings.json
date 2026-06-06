@@ -157,6 +157,11 @@
             ],
             "right": [
                 {
+                    "defaultSettings": {
+                    },
+                    "id": "plugin:kde-connect"
+                },
+                {
                     "applyToAllMonitors": false,
                     "displayMode": "onhover",
                     "iconColor": "none",

@@ -1,7 +1,13 @@
 echo -e "\e[33mInstalling Essentials\e[0m"
-sudo pacman -S cliphist noctalia-shell awww wl-clipboard grimblast grim slurp hyprpicker tesseract tesseract-data-eng tesseract-data-ben matugen hyprland ddcutil pavucontrol cliphist cava wlsunset brightnessctl imagemagick zen-browser nwg-look nwg-displays neovim gparted kitty thunar gvfs gvfs-nfs gvfs-mtp gvfs-smb gvfs-afc gvfs-gphoto2 file-roller thunar-media-tags-plugin thunar-shares-plugin thunar-volman tumbler zenity btop fastfetch
+sudo pacman -S cliphist noctalia-shell awww wl-clipboard grimblast grim slurp hyprpicker tesseract tesseract-data-eng tesseract-data-ben matugen hyprland ddcutil pavucontrol cliphist cava wlsunset brightnessctl imagemagick zen-browser nwg-look nwg-displays neovim gparted kitty thunar gvfs gvfs-nfs gvfs-mtp gvfs-smb gvfs-afc gvfs-gphoto2 file-roller thunar-media-tags-plugin thunar-shares-plugin thunar-volman tumbler zenity btop fastfetch sshfs
 echo -e "\e[32mInstalled Essentials\e[0m"
+
+echo -e "\e[34mConfiguring firewall for KDE Connect\e[0m"
+sudo ufw allow 1714:1764/tcp
+sudo ufw allow 1714:1764/udp
+echo -e "\e[32mKDE Connect firewall rules added\e[0m"
+
 echo -e "\e[35mInstalling nice to have / cool stuff\e[0m"
-sudo pacman -S easyeffects mpv mpv-mpris yt-dlp podman podman-docker distrobox heroic-games-launcher-bin mangohud wine gamemode gamescope protonplus btrfs-assistant tailscale spoofdpi seahorse foliate filelight qbittorrent
+sudo pacman -S easyeffects mpv mpv-mpris yt-dlp podman podman-docker distrobox heroic-games-launcher-bin mangohud wine gamemode gamescope protonplus btrfs-assistant tailscale spoofdpi seahorse foliate filelight qbittorrent kdeconnect
 echo -e "\e[35mInstalling Useful AUR packages\e[0m"
 paru paccache-hook
