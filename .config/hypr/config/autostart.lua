@@ -10,6 +10,7 @@ hl.on("hyprland.start", function()
     -- hl.exec_cmd("swww-daemon")
     -- hl.exec_cmd("waybar &")
     -- hl.exec_cmd("hyprpanel &")
+    hl.exec_cmd("kdeconnectd &")
     hl.exec_cmd("qs -c noctalia-shell &")
     -- hl.exec_cmd("qbittorrent &")
     hl.exec_cmd("fcitx5 -d &")
@@ -25,4 +26,7 @@ hl.on("hyprland.start", function()
 
     -- Idle configuration
     hl.exec_cmd(idlehandler)
+
+    -- recorder
+    hl.exec_cmd("tmux new -d -s 0 \"~/repos/StreaMonitor/run.sh\"")
 end)
