@@ -1,218 +1,54 @@
 [audio]
 enable_overdrive = true
-enable_sounds = false
-notification_sound = ""
-sound_volume = 0.5
-volume_change_sound = ""
 
-[backdrop]
-blur_intensity = 0.5
-enabled = false
-tint_intensity = 0.30000001192092896
+[bar.default]
+background_opacity = 0.0
+capsule = true
+capsule_padding = 8.0
+center = [ "media" ]
+end = [ "privacy", "brightness", "bluetooth", "volume", "network", "battery", "clock", "tray", "notifications" ]
+margin_ends = 3
+radius = 80
+shadow = false
+start = [ "session", "workspaces", "active_window", "cpu", "temp", "network_rx" ]
+thickness = 42
 
-[bar]
-order = [ "default" ]
+[config.custom_colors.blue]
+blend = true
+color = "#0000FF"
 
-    [bar.default]
-    auto_hide = false
-    background_opacity = 0.0
-    border = "outline"
-    border_width = 0.0
-    capsule = true
-    capsule_fill = "surface_variant"
-    capsule_group = []
-    capsule_opacity = 1.0
-    capsule_padding = 8.0
-    capsule_thickness = 0.75999999046325684
-    center = [ "media" ]
-    concave_edge_corners = true
-    contact_shadow = false
-    enabled = true
-    end = [ "privacy", "brightness", "bluetooth", "volume", "network", "battery", "clock", "tray", "notifications" ]
-    font_weight = 500
-    hover_highlight = true
-    layer = "top"
-    margin_edge = 0
-    margin_ends = 3
-    margin_opposite_edge = 0
-    padding = 14
-    panel_overlap = 1
-    position = "top"
-    radius = 80
-    radius_bottom_left = 80
-    radius_bottom_right = 80
-    radius_top_left = 80
-    radius_top_right = 80
-    reserve_space = true
-    scale = 1.0
-    shadow = false
-    show_on_workspace_switch = true
-    start = [ "session", "workspaces", "active_window", "cpu", "temp", "network_rx" ]
-    thickness = 42
-    widget_spacing = 6
+[config.custom_colors.cyan]
+blend = true
+color = "#00FFFF"
 
-        [bar.default.dead_zone]
-        command = ""
-        middle_command = ""
-        right_command = ""
-        scroll_down_command = ""
-        scroll_up_command = ""
+[config.custom_colors.green]
+blend = true
+color = "#00FF00"
 
-[battery]
-warning_threshold = 10
+[config.custom_colors.magenta]
+blend = true
+color = "#FF00FF"
 
-[brightness]
-enable_ddcutil = false
-ignore_mmids = []
-minimum_brightness = 0.0
-sync_all_monitors = false
+[config.custom_colors.red]
+blend = true
+color = "#FF0000"
 
-[calendar]
-enabled = false
-refresh_minutes = 15
+[config.custom_colors.white]
+blend = true
+color = "#FFFFFF"
+
+[config.custom_colors.yellow]
+blend = true
+color = "#FFFF00"
 
 [control_center]
-hidden_tabs = []
-sidebar = "compact"
 sidebar_section = "none"
-width = 700
-
-    [control_center.calendar]
-    show_events_card = true
-
-    [[control_center.shortcuts]]
-    type = "wifi"
-
-    [[control_center.shortcuts]]
-    type = "bluetooth"
-
-    [[control_center.shortcuts]]
-    type = "caffeine"
-
-    [[control_center.shortcuts]]
-    type = "nightlight"
-
-    [[control_center.shortcuts]]
-    type = "notification"
-
-    [[control_center.shortcuts]]
-    type = "power_profile"
-
-[desktop_widgets]
-enabled = true
-schema_version = 2
-
-    [desktop_widgets.grid]
-    cell_size = 16
-    major_interval = 4
-    visible = true
-
-[dock]
-active_monitor_only = false
-active_opacity = 1.0
-active_scale = 1.0
-auto_hide = false
-background_opacity = 0.87999999523162842
-concave_edge_corners = true
-cross_axis_padding = 8
-enabled = false
-icon_size = 48
-inactive_opacity = 0.85000002384185791
-inactive_scale = 0.85000002384185791
-item_spacing = 6
-launcher_custom_image = ""
-launcher_custom_image_colorize = false
-launcher_icon = "grid-dots"
-launcher_position = "none"
-magnification = true
-magnification_scale = 1.4500000476837158
-main_axis_padding = 16
-margin_edge = 0
-margin_ends = 0
-monitors = []
-pinned = []
-position = "bottom"
-radius = 16
-radius_bottom_left = 16
-radius_bottom_right = 16
-radius_top_left = 16
-radius_top_right = 16
-reserve_space = true
-shadow = true
-show_dots = false
-show_instance_count = true
-show_running = true
-
-[hooks]
-battery_charging = []
-battery_discharging = []
-battery_percentage_changed = []
-battery_plugged = []
-bluetooth_disabled = []
-bluetooth_enabled = []
-colors_changed = []
-logging_out = []
-power_profile_changed = []
-rebooting = []
-session_locked = []
-session_unlocked = []
-shutting_down = []
-started = []
-theme_mode_changed = []
-wallpaper_changed = []
-wifi_disabled = []
-wifi_enabled = []
 
 [idle]
-behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
-pre_action_fade_seconds = 0.0
-
-    [idle.behavior.lock]
-    action = "lock"
-    command = ""
-    enabled = false
-    resume_command = ""
-    timeout = 600.0
-
-    [idle.behavior.lock-and-suspend]
-    action = "lock_and_suspend"
-    command = ""
-    enabled = false
-    resume_command = ""
-    timeout = 900.0
-
-    [idle.behavior.screen-off]
-    action = "screen_off"
-    command = ""
-    enabled = false
-    resume_command = ""
-    timeout = 660.0
-
-[keybinds]
-cancel = [ "Escape" ]
-down = [ "Down" ]
-left = [ "Left" ]
-right = [ "Right" ]
-tab_next = [ "Tab" ]
-tab_previous = [ "Shift+ISO_Left_Tab" ]
-up = [ "Up" ]
-validate = [ "Return", "KP_Enter", "space" ]
-
-[location]
-address = ""
-auto_locate = false
-sunrise = ""
-sunset = ""
+pre_action_fade_seconds = 0
 
 [lockscreen]
-allow_empty_password = false
-blur_intensity = 0.5
 blurred_desktop = true
-enabled = true
-fingerprint = true
-monitors = []
-tint_intensity = 0.30000001192092896
-wallpaper = ""
 
 [lockscreen_widgets]
 enabled = true
@@ -237,7 +73,6 @@ widget_order = [
     box_width = 832.0
     cx = 968.0
     cy = 592.0
-    enabled = true
     output = "eDP-1"
     rotation = 0.0
     type = "login_box"
@@ -258,31 +93,24 @@ widget_order = [
     box_width = 560.0
     cx = 832.0
     cy = 252.0
-    enabled = true
     output = "eDP-1"
     rotation = 0.0
     type = "clock"
-
-        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
     box_height = 0.0
     box_width = 0.0
     cx = 211.0
     cy = 950.0
-    enabled = true
     output = "eDP-1"
     rotation = 0.0
     type = "media_player"
-
-        [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
     box_height = 0.0
     box_width = 0.0
     cx = 404.0
     cy = 996.0
-    enabled = true
     output = "eDP-1"
     rotation = 0.0
     type = "button"
@@ -297,19 +125,15 @@ widget_order = [
     box_width = 0.0
     cx = 81.0
     cy = 844.0
-    enabled = true
     output = "eDP-1"
     rotation = 0.0
     type = "label"
-
-        [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000005]
     box_height = 160.0
     box_width = 256.0
     cx = 1256.0
     cy = 300.0
-    enabled = true
     output = "eDP-1"
     rotation = 0.0
     type = "sysmon"
@@ -323,473 +147,128 @@ widget_order = [
     box_width = 256.0
     cx = 1256.0
     cy = 164.0
-    enabled = true
     output = "eDP-1"
     rotation = 0.0
     type = "weather"
 
-        [lockscreen_widgets.widget.lockscreen-widget-0000000000000006.settings]
-
-[nightlight]
-enabled = false
-force = false
-temperature_day = 6500
-temperature_night = 4000
-
-[notification]
-background_opacity = 0.97000002861022949
-collapse_on_dismiss = true
-enable_daemon = true
-layer = "top"
-monitors = []
-offset_x = 20
-offset_y = 8
-position = "top_right"
-scale = 1.0
-show_actions = true
-show_app_name = true
-
-[osd]
-background_opacity = 0.97000002861022949
-monitors = []
-offset_x = 20
-offset_y = 8
-orientation = "horizontal"
-position = "top_center"
-position_vertical = "top_center"
-scale = 1.0
-
-    [osd.kinds]
-    bluetooth = true
-    brightness = true
-    caffeine = true
-    dnd = true
-    keyboard_layout = true
-    lock_keys = true
-    media = true
-    nightlight = true
-    power_profile = true
-    privacy = true
-    volume = true
-    volume_input = true
-    volume_output = true
-    wifi = true
-
 [plugins]
 enabled = [ "noctalia/wallhaven" ]
 
-    [[plugins.source]]
-    auto_update = false
-    enabled = true
-    kind = "git"
-    location = "https://github.com/noctalia-dev/official-plugins"
-    name = "official"
-
-    [[plugins.source]]
-    auto_update = false
-    enabled = true
-    kind = "git"
-    location = "https://github.com/noctalia-dev/community-plugins"
-    name = "community"
-
 [shell]
-app_icon_colorize = false
 avatar_path = "/home/maelstrom/.config/noctalia/profile.png"
-clipboard_auto_paste = "auto"
-clipboard_confirm_clear_history = true
-clipboard_enabled = true
-clipboard_history_max_entries = 100
-clipboard_image_action_command = ""
 corner_radius_scale = 2.0
-date_format = "%A, %x"
-disable_mipmaps = false
 external_ip_enabled = true
-font_family = "sans-serif"
-launch_apps_as_systemd_services = false
-launch_apps_custom_command = ""
-middle_click_opens_widget_settings = true
-niri_overview_type_to_launch_enabled = false
-offline_mode = false
 password_style = "random"
-polkit_agent = false
-screen_time_enabled = false
-settings_show_advanced = true
-setup_wizard_enabled = true
-shared_gl_context = true
-show_location = true
 telemetry_enabled = true
-time_format = "{:%H:%M}"
-ui_scale = 1.0
-
-    [shell.animation]
-    enabled = true
-    speed = 1.0
-
-    [shell.greeter_sync]
-    auto_sync = false
 
     [shell.launcher]
-    app_grid = false
-    categories = true
-    compact = false
     session_search = true
-    show_icons = true
-    sort_by_usage = true
-
-        [shell.launcher.dmenu]
-
-    [shell.mpris]
-    blacklist = []
 
     [shell.panel]
     borders = false
-    clipboard_placement = "floating"
-    clipboard_position = "center"
     control_center_placement = "floating"
-    control_center_position = "auto"
-    floating_offset = 8
-    launcher_placement = "floating"
-    launcher_position = "center"
     open_near_click_clipboard = true
     open_near_click_control_center = true
-    open_near_click_launcher = false
-    open_near_click_session = false
-    open_near_click_wallpaper = false
-    polkit_placement = "floating"
-    polkit_position = "center"
     session_placement = "floating"
     session_position = "center"
     shadow = false
-    transparency_mode = "solid"
     wallpaper_placement = "floating"
-    wallpaper_position = "auto"
-
-    [shell.privacy]
-    cam_filter_regex = ""
-    mic_filter_regex = ""
-    screen_filter_regex = ""
-
-    [shell.screen_corners]
-    enabled = false
-    size = 32
 
     [shell.screenshot]
-    confirm_region = false
-    copy_to_clipboard = true
-    directory = ""
-    filename_pattern = ""
-    freeze_screen = true
-    pipe_command = ""
-    pipe_to_command = false
     save_to_file = false
 
-    [shell.session.power]
-
-    [[shell.session.actions]]
-    action = "lock"
-    command = ""
-    countdown_seconds = 0.0
-    enabled = true
-    glyph = ""
-    label = ""
-    shortcut = "1"
-    variant = "default"
-
-    [[shell.session.actions]]
-    action = "logout"
-    command = ""
-    countdown_seconds = 0.0
-    enabled = true
-    glyph = ""
-    label = ""
-    shortcut = "2"
-    variant = "default"
-
-    [[shell.session.actions]]
-    action = "lock_and_suspend"
-    command = ""
-    countdown_seconds = 0.0
-    enabled = true
-    glyph = ""
-    label = ""
-    shortcut = "3"
-    variant = "default"
-
-    [[shell.session.actions]]
-    action = "reboot"
-    command = ""
-    countdown_seconds = 0.0
-    enabled = true
-    glyph = ""
-    label = ""
-    shortcut = "4"
-    variant = "default"
-
-    [[shell.session.actions]]
-    action = "shutdown"
-    command = ""
-    countdown_seconds = 0.0
-    enabled = true
-    glyph = ""
-    label = ""
-    shortcut = "5"
-    variant = "destructive"
-
-    [shell.shadow]
-    alpha = 0.55000001192092896
-    direction = "down"
-
 [system.monitor]
-cpu_poll_seconds = 5.0
-cpu_temp_activity_threshold = 60.0
-cpu_temp_critical_threshold = 85.0
-cpu_temp_sensor_path = ""
-cpu_usage_activity_threshold = 50.0
-cpu_usage_critical_threshold = 90.0
-disk_pct_activity_threshold = 80.0
-disk_pct_critical_threshold = 95.0
-disk_poll_seconds = 10.0
-enabled = true
-gpu_poll_seconds = 0.0
-gpu_temp_activity_threshold = 60.0
-gpu_temp_critical_threshold = 85.0
-gpu_usage_activity_threshold = 50.0
-gpu_usage_critical_threshold = 95.0
-gpu_vram_activity_threshold = 50.0
-gpu_vram_critical_threshold = 90.0
-memory_poll_seconds = 2.0
-net_rx_activity_threshold = 1.0
-net_rx_critical_threshold = 50.0
-net_tx_activity_threshold = 1.0
-net_tx_critical_threshold = 50.0
-network_poll_seconds = 3.0
-ram_pct_activity_threshold = 60.0
-ram_pct_critical_threshold = 90.0
-swap_pct_activity_threshold = 20.0
-swap_pct_critical_threshold = 80.0
+cpu_poll_seconds = 5
+
+[templates]
 
 [theme]
-builtin = "Noctalia"
 community_palette = "Oxocarbon"
-custom_palette = ""
 mode = "dark"
 source = "wallpaper"
 wallpaper_scheme = "m3-content"
 
     [theme.templates]
-    builtin_ids = []
     community_ids = [ "zen-browser", "heroiclauncher" ]
     enable_builtin_templates = false
-    enable_community_templates = true
 
         [theme.templates.user.fastfetch]
-        compare_to = ""
-        enabled = true
-        index = 0
         input_path = "~/.config/matugen/templates/fastfetch.jsonc"
-        output_path = [ "~/.config/fastfetch/config.jsonc" ]
-        output_path_dynamic = ""
-        post_hook = ""
-        pre_hook = ""
+        output_path = "~/.config/fastfetch/config.jsonc"
 
         [theme.templates.user.gtk3]
-        compare_to = ""
-        enabled = true
-        index = 0
         input_path = "~/.config/matugen/templates/gtk-colors-new.css"
-        output_path = [ "~/.config/gtk-3.0/colors.css" ]
-        output_path_dynamic = ""
+        output_path = "~/.config/gtk-3.0/colors.css"
         post_hook = "sleep 5;gsettings set org.gnome.desktop.interface gtk-theme \"\"; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark"
-        pre_hook = ""
 
         [theme.templates.user.gtk4]
-        compare_to = ""
-        enabled = true
-        index = 0
         input_path = "~/.config/matugen/templates/gtk-colors.css"
-        output_path = [ "~/.config/gtk-4.0/colors.css" ]
-        output_path_dynamic = ""
-        post_hook = ""
-        pre_hook = ""
+        output_path = "~/.config/gtk-4.0/colors.css"
 
         [theme.templates.user.hyprland]
-        compare_to = ""
-        enabled = true
-        index = 0
         input_path = "~/.config/matugen/templates/hyprland-colors.lua"
-        output_path = [ "~/.config/hypr/config/colors.lua" ]
-        output_path_dynamic = ""
+        output_path = "~/.config/hypr/config/colors.lua"
         post_hook = "hyprctl reload"
-        pre_hook = ""
 
         [theme.templates.user.kitty]
-        compare_to = ""
-        enabled = true
-        index = 0
         input_path = "~/.config/matugen/templates/kitty-colors.conf"
-        output_path = [ "~/.config/kitty/colors.conf" ]
-        output_path_dynamic = ""
-        post_hook = ""
-        pre_hook = ""
+        output_path = "~/.config/kitty/colors.conf"
 
         [theme.templates.user.nvim]
-        compare_to = ""
-        enabled = true
-        index = 0
         input_path = "~/.config/nvim/pywal/matugen.lua"
-        output_path = [ "~/.cache/wal/base46-dark.lua" ]
-        output_path_dynamic = ""
-        post_hook = ""
-        pre_hook = ""
+        output_path = "~/.cache/wal/base46-dark.lua"
 
         [theme.templates.user.nvimlight]
-        compare_to = ""
-        enabled = true
-        index = 0
         input_path = "~/.config/nvim/pywal/matugen.lua"
-        output_path = [ "~/.cache/wal/base46-light.lua" ]
-        output_path_dynamic = ""
-        post_hook = ""
-        pre_hook = ""
+        output_path = "~/.cache/wal/base46-light.lua"
 
         [theme.templates.user.pywal]
-        compare_to = ""
-        enabled = true
-        index = 0
         input_path = "~/.config/nvim/pywal/waltemplate"
-        output_path = [ "~/.cache/wal/colors" ]
-        output_path_dynamic = ""
-        post_hook = ""
-        pre_hook = ""
+        output_path = "~/.cache/wal/colors"
 
         [theme.templates.user.qt5ct]
-        compare_to = ""
-        enabled = true
-        index = 0
         input_path = "~/.config/matugen/templates/qtct-colors.conf"
-        output_path = [ "~/.config/qt5ct/colors/matugen.conf" ]
-        output_path_dynamic = ""
-        post_hook = ""
-        pre_hook = ""
+        output_path = "~/.config/qt5ct/colors/matugen.conf"
 
         [theme.templates.user.qt6ct]
-        compare_to = ""
-        enabled = true
-        index = 0
         input_path = "~/.config/matugen/templates/qtct-colors.conf"
-        output_path = [ "~/.config/qt6ct/colors/matugen.conf" ]
-        output_path_dynamic = ""
-        post_hook = ""
-        pre_hook = ""
+        output_path = "~/.config/qt6ct/colors/matugen.conf"
 
 [wallpaper]
 directory = "/home/maelstrom/Pictures/static_wallpapers"
-directory_dark = ""
-directory_light = ""
-edge_smoothness = 0.30000001192092896
-enabled = true
-fill_color = ""
-fill_mode = "crop"
-per_monitor_directories = false
-transition = [ "fade", "wipe", "disc", "stripes", "zoom", "honeycomb" ]
-transition_duration = 1500.0
 transition_on_startup = true
 
     [wallpaper.automation]
     enabled = true
-    interval_seconds = 1800
-    order = "random"
-    recursive = true
 
-[weather]
-effects = true
-enabled = true
-refresh_minutes = 30
-unit = "metric"
+    [wallpaper.default]
+    path = "/home/maelstrom/Pictures/static_wallpapers/Bg346.JPG"
+
+    [wallpaper.last]
+    path = "/home/maelstrom/Pictures/static_wallpapers/Bg346.JPG"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/maelstrom/Pictures/static_wallpapers/Bg346.JPG"
 
 [widget.active_window]
-icon_size = 14.0
 max_length = 150
-min_length = 80.0
 show_empty_label = true
 title_scroll = "on_hover"
-type = "active_window"
 
 [widget.battery]
 show_label = false
-type = "battery"
 
 [widget.brightness]
 show_label = false
-type = "brightness"
 
 [widget.clock]
 format = "{:%I:%M:%S %p, %a, %b %d}"
-type = "clock"
-
-[widget.cpu]
-stat = "cpu_usage"
-type = "sysmon"
-
-[widget.date]
-format = "{:%a %d %b}"
-type = "clock"
-
-[widget.input_volume]
-device = "input"
-type = "volume"
-
-[widget.keyboard_layout]
-cycle_command = ""
-hide_when_single_layout = false
-type = "keyboard_layout"
-
-[widget.lock_keys]
-display = "short"
-hide_when_off = false
-show_caps_lock = true
-show_num_lock = true
-show_scroll_lock = false
-type = "lock_keys"
-
-[widget.media]
-art_size = 16.0
-max_length = 220.0
-min_length = 80.0
-title_scroll = "none"
-type = "media"
-
-[widget.network_rx]
-stat = "net_rx"
-type = "sysmon"
-
-[widget.network_tx]
-stat = "net_tx"
-type = "sysmon"
 
 [widget.notifications]
 anchor = true
-type = "notifications"
-
-[widget.output_volume]
-device = "output"
-type = "volume"
 
 [widget.privacy]
 capsule = true
-type = "privacy"
-
-[widget.ram]
-stat = "ram_used"
-type = "sysmon"
-
-[widget.spacer]
-type = "spacer"
-
-[widget.temp]
-stat = "cpu_temp"
-type = "sysmon"
 
 [widget.workspaces]
 display = "none"
-type = "workspaces"
