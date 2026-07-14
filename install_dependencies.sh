@@ -1,5 +1,5 @@
 echo -e "\e[33mInstalling Essentials\e[0m"
-sudo pacman -S cliphist noctalia-shell awww wl-clipboard grimblast grim slurp hyprpicker tesseract tesseract-data-eng tesseract-data-ben matugen hyprland ddcutil pavucontrol cliphist cava wlsunset brightnessctl imagemagick zen-browser nwg-look nwg-displays neovim gparted kitty thunar gvfs gvfs-nfs gvfs-mtp gvfs-smb gvfs-afc gvfs-gphoto2 file-roller thunar-media-tags-plugin thunar-shares-plugin thunar-volman tumbler zenity btop fastfetch sshfs grub-btrfs-support
+sudo pacman -S cliphist noctalia awww wl-clipboard grimblast grim slurp hyprpicker tesseract tesseract-data-eng tesseract-data-ben matugen hyprland ddcutil pavucontrol cliphist cava wlsunset brightnessctl imagemagick zen-browser nwg-look nwg-displays neovim gparted kitty thunar gvfs gvfs-nfs gvfs-mtp gvfs-smb gvfs-afc gvfs-gphoto2 file-roller thunar-media-tags-plugin thunar-shares-plugin thunar-volman tumbler zenity btop fastfetch sshfs grub-btrfs-support
 echo -e "\e[32mInstalled Essentials\e[0m"
 
 echo -e "\e[34mConfiguring firewall for KDE Connect\e[0m"
