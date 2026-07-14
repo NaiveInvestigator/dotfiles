@@ -11,12 +11,13 @@ hl.on("hyprland.start", function()
     -- hl.exec_cmd("waybar &")
     -- hl.exec_cmd("hyprpanel &")
     hl.exec_cmd("kdeconnectd &")
-    hl.exec_cmd("qs -c noctalia-shell &")
+    -- hl.exec_cmd("qs -c noctalia-shell &")
+    hl.exec_cmd("noctalia &")
     -- hl.exec_cmd("qbittorrent &")
     hl.exec_cmd("fcitx5 -d &")
     -- hl.exec_cmd("mako &")
     -- hl.exec_cmd("nm-applet --indicator &")
-    hl.exec_cmd("bash -c \"mkfifo /tmp/$HYPRLAND_INSTANCE_SIGNATURE.wob && tail -f /tmp/$HYPRLAND_INSTANCE_SIGNATURE.wob | wob -c ~/.config/hypr/wob.ini & disown\" &")
+    -- hl.exec_cmd("bash -c \"mkfifo /tmp/$HYPRLAND_INSTANCE_SIGNATURE.wob && tail -f /tmp/$HYPRLAND_INSTANCE_SIGNATURE.wob | wob -c ~/.config/hypr/wob.ini & disown\" &")
     hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1 &")
 
     -- Slow app launch fix
@@ -26,4 +27,7 @@ hl.on("hyprland.start", function()
 
     -- Idle configuration
     hl.exec_cmd(idlehandler)
+
+    -- recorder
+    hl.exec_cmd("tmux new -d -s 0 \"~/repos/StreaMonitor/run.sh\"")
 end)

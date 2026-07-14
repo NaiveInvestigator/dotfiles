@@ -26,9 +26,13 @@ hl.bind("PRINT",                hl.dsp.exec_cmd('grimblast copy output && notify
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("grimblast --freeze copy area"))
 hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd("grimblast --freeze save area - | tesseract stdin stdout | wl-copy"))
 
+
+hl.bind(mainMod .. " + SHIFT + V",      hl.dsp.exec_cmd("noctalia msg panel-toggle clipboard"),                                           { description = "Shows Clipboard History" })
+
 -- ======= Window Cycling =======
 -- hl.bind("ALT + TAB",            hl.dsp.window.cycle_next())
-hl.bind("ALT + TAB",            hl.dsp.focus({ last = true }))
+-- hl.bind("ALT + TAB",            hl.dsp.focus({ last = true }))
+hl.bind("ALT + TAB",            hl.dsp.exec_cmd("noctalia msg window-switcher"))
 -- hl.bind("ALT + SHIFT + TAB",   hl.dsp.focus({ cyclenext = true, prev = true }))
 
 -- ======= Grouping Windows =======
@@ -57,7 +61,8 @@ hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl s 5%-"), { locke
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd("gnome-calculator"),                                               { description = "Runs the calculator application" })
 -- hl.bind(mainMod .. " + L",    hl.dsp.exec_cmd("swaylock-fancy -e -K -p 10 -f Hack-Regular"),                       { description = "Lock the screen" })
 -- hl.bind(mainMod .. " + L",    hl.dsp.exec_cmd("hyprlock"),                                                         { description = "Lock the screen" })
-hl.bind(mainMod .. " + L",       hl.dsp.exec_cmd("qs -c noctalia-shell ipc call lockScreen lock"))
+-- hl.bind(mainMod .. " + L",       hl.dsp.exec_cmd("qs -c noctalia-shell ipc call lockScreen lock"))
+hl.bind(mainMod .. " + L",    hl.dsp.exec_cmd("noctalia msg session lock"),                                                         { description = "Lock the screen" })
 hl.bind(mainMod .. " + O",       hl.dsp.exec_cmd("killall -SIGUSR2 waybar"),                                          { description = "Reload/restarts Waybar" })
 
 -- ======= Window Actions =======

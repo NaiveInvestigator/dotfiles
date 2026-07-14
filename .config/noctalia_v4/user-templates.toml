@@ -15,47 +15,47 @@
 #input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/noctalia.json"
 #output_path = "/home/maelstrom/.cache/noctalia/placeholder.json"
 
-[theme.templates.user.hyprland]
+[templates.hyprland]
 input_path = '~/.config/matugen/templates/hyprland-colors.lua'
 output_path = '~/.config/hypr/config/colors.lua'
 post_hook = 'hyprctl reload'
 
-[theme.templates.user.fastfetch]
+[templates.fastfetch]
 input_path = '~/.config/matugen/templates/fastfetch.jsonc'
 output_path = '~/.config/fastfetch/config.jsonc'
 
-[theme.templates.user.nvim]
+[templates.nvim]
 input_path = '~/.config/nvim/pywal/matugen.lua'
 output_path = '~/.cache/wal/base46-dark.lua'
 
-[theme.templates.user.nvimlight]
+[templates.nvimlight]
 input_path = '~/.config/nvim/pywal/matugen.lua'
 output_path = '~/.cache/wal/base46-light.lua'
 
 # also required for nvim
-[theme.templates.user.pywal]
+[templates.pywal]
 input_path = '~/.config/nvim/pywal/waltemplate'
 output_path = '~/.cache/wal/colors'
 
-[theme.templates.user.gtk3]
+[templates.gtk3]
 input_path = '~/.config/matugen/templates/gtk-colors-new.css'
 output_path = '~/.config/gtk-3.0/colors.css'
 post_hook = 'sleep 5;gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark'
 # post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
 
-[theme.templates.user.gtk4]
+[templates.gtk4]
 input_path = '~/.config/matugen/templates/gtk-colors.css'
 output_path = '~/.config/gtk-4.0/colors.css'
 
-[theme.templates.user.kitty]
+[templates.kitty]
 input_path = '~/.config/matugen/templates/kitty-colors.conf'
 output_path = '~/.config/kitty/colors.conf'
 
-[theme.templates.user.qt5ct]
+[templates.qt5ct]
 input_path = '~/.config/matugen/templates/qtct-colors.conf'
 output_path = '~/.config/qt5ct/colors/matugen.conf'
 
-[theme.templates.user.qt6ct]
+[templates.qt6ct]
 input_path = '~/.config/matugen/templates/qtct-colors.conf'
 output_path = '~/.config/qt6ct/colors/matugen.conf'
 

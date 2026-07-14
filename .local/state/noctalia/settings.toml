@@ -1,0 +1,193 @@
+[audio]
+enable_overdrive = true
+
+[bar.default]
+background_opacity = 0.0
+capsule = true
+capsule_padding = 8.0
+center = [ "media" ]
+concave_edge_corners = false
+end = [ "privacy", "brightness", "bluetooth", "volume", "network", "battery", "clock", "tray", "notifications" ]
+margin_ends = 3
+radius = 80
+shadow = false
+start = [ "session", "workspaces", "active_window", "cpu", "temp", "network_rx" ]
+thickness = 42
+
+[lockscreen]
+blurred_desktop = true
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@eDP-1",
+    "lockscreen-widget-0000000000000001",
+    "lockscreen-widget-0000000000000002",
+    "lockscreen-widget-0000000000000003",
+    "lockscreen-widget-0000000000000004",
+    "lockscreen-widget-0000000000000005",
+    "lockscreen-widget-0000000000000006"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 64
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 120.0
+    box_width = 832.0
+    cx = 968.0
+    cy = 592.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        input_opacity = 1.0
+        input_radius = 6.0
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_password_hint = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 256.0
+    box_width = 560.0
+    cx = 832.0
+    cy = 252.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "clock"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 211.0
+    cy = 950.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "media_player"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 404.0
+    cy = 996.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "button"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
+        background = true
+        glyph = "heart"
+        variant = "default"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 81.0
+    cy = 844.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "label"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000005]
+    box_height = 160.0
+    box_width = 256.0
+    cx = 1256.0
+    cy = 300.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "sysmon"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000005.settings]
+        stat = "cpu_usage"
+        stat2 = "cpu_temp"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000006]
+    box_height = 80.0
+    box_width = 256.0
+    cx = 1256.0
+    cy = 164.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "weather"
+
+[plugins]
+enabled = [ "noctalia/wallhaven" ]
+
+[shell]
+corner_radius_scale = 2.0
+external_ip_enabled = true
+password_style = "random"
+telemetry_enabled = true
+
+    [shell.launcher]
+    session_search = true
+
+    [shell.panel]
+    borders = false
+    clipboard_placement = "attached"
+    open_near_click_clipboard = true
+    polkit_placement = "attached"
+    session_placement = "floating"
+    session_position = "center"
+    shadow = false
+    wallpaper_placement = "floating"
+
+    [shell.screenshot]
+    save_to_file = false
+
+[system.monitor]
+cpu_poll_seconds = 5
+
+[theme]
+community_palette = "Oxocarbon"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    community_ids = [ "zen-browser", "heroiclauncher" ]
+    enable_builtin_templates = false
+
+[wallpaper]
+directory = "/home/maelstrom/Pictures/static_wallpapers"
+transition_on_startup = true
+
+    [wallpaper.automation]
+    enabled = true
+
+    [wallpaper.default]
+    path = "/home/maelstrom/Pictures/static_wallpapers/purple-smoking-girl.jpg"
+
+    [wallpaper.last]
+    path = "/home/maelstrom/Pictures/static_wallpapers/purple-smoking-girl.jpg"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/maelstrom/Pictures/static_wallpapers/purple-smoking-girl.jpg"
+
+[widget.active_window]
+max_length = 150
+show_empty_label = true
+title_scroll = "on_hover"
+
+[widget.battery]
+show_label = false
+
+[widget.brightness]
+show_label = false
+
+[widget.notifications]
+anchor = true
+
+[widget.privacy]
+capsule = true
+
+[widget.workspaces]
+display = "none"
