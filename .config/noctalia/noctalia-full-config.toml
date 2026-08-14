@@ -24,7 +24,6 @@ order = [ "default" ]
     border_width = 0.0
     capsule = true
     capsule_fill = "surface_variant"
-    capsule_group = []
     capsule_opacity = 1.0
     capsule_padding = 8.0
     capsule_thickness = 0.75999999046325684
@@ -32,7 +31,7 @@ order = [ "default" ]
     concave_edge_corners = true
     contact_shadow = false
     enabled = true
-    end = [ "privacy", "brightness", "bluetooth", "volume", "network", "battery", "clock", "tray", "notifications" ]
+    end = [ "privacy", "brightness", "bluetooth", "group:g3", "network", "battery", "clock", "tray", "notifications" ]
     font_weight = 500
     hover_highlight = true
     layer = "top"
@@ -52,11 +51,31 @@ order = [ "default" ]
     shadow = false
     show_on_workspace_switch = true
     smart_auto_hide = false
-    start = [ "session", "workspaces", "active_window", "cpu", "temp", "network_rx", "audio_visualizer" ]
+    start = [ "session", "workspaces", "active_window", "group:g2" ]
     thickness = 42
     widget_spacing = 6
 
         [bar.default.dead_zone]
+
+        [[bar.default.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        enabled = true
+        fill = "surface_variant"
+        id = "g2"
+        members = [ "cpu", "temp", "network_rx" ]
+        opacity = 1.0
+        padding = 8.0
+
+        [[bar.default.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        enabled = true
+        fill = "surface_variant"
+        id = "g3"
+        members = [ "volume", "audio_visualizer" ]
+        opacity = 1.0
+        padding = 8.0
 
 [battery]
 warning_threshold = 10
@@ -256,9 +275,9 @@ widget_order = [
     "lockscreen-widget-0000000000000001",
     "lockscreen-widget-0000000000000002",
     "lockscreen-widget-0000000000000003",
-    "lockscreen-widget-0000000000000004",
     "lockscreen-widget-0000000000000005",
-    "lockscreen-widget-0000000000000006"
+    "lockscreen-widget-0000000000000006",
+    "lockscreen-widget-0000000000000008"
 ]
 
     [lockscreen_widgets.grid]
@@ -267,7 +286,7 @@ widget_order = [
     visible = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
-    box_height = 120.0
+    box_height = 196.0
     box_width = 832.0
     cx = 968.0
     cy = 592.0
@@ -280,11 +299,17 @@ widget_order = [
         background_color = "surface_variant"
         background_opacity = 0.88
         background_radius = 12.0
+        center_password_text = false
         input_opacity = 1.0
         input_radius = 6.0
+        layout = "regular"
         show_caps_lock = true
         show_keyboard_layout = true
         show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
     box_height = 256.0
@@ -325,18 +350,6 @@ widget_order = [
         glyph = "heart"
         variant = "default"
 
-    [lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
-    box_height = 0.0
-    box_width = 0.0
-    cx = 81.0
-    cy = 844.0
-    enabled = true
-    output = "eDP-1"
-    rotation = 0.0
-    type = "label"
-
-        [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
-
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000005]
     box_height = 160.0
     box_width = 256.0
@@ -362,6 +375,20 @@ widget_order = [
     type = "weather"
 
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000006.settings]
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000008]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 524.0
+    cy = 946.0
+    enabled = true
+    output = "eDP-1"
+    rotation = 0.0
+    type = "fancy_audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000008.settings]
+        background = false
+        visualization_mode = "bars_rings"
 
 [nightlight]
 enabled = false
@@ -826,6 +853,13 @@ show_empty_label = true
 title_scroll = "on_hover"
 type = "active_window"
 
+[widget.audio_visualizer]
+bands = 15
+interactive = false
+show_when_idle = true
+type = "audio_visualizer"
+width = 100
+
 [widget.battery]
 show_label = false
 type = "battery"
@@ -901,6 +935,10 @@ type = "spacer"
 [widget.temp]
 stat = "cpu_temp"
 type = "sysmon"
+
+[widget.volume]
+show_label = false
+type = "volume"
 
 [widget.wallhaven]
 type = "noctalia/wallhaven:wallhaven"
