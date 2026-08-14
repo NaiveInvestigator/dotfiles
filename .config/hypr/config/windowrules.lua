@@ -76,6 +76,16 @@ hl.workspace_rule({ workspace = "w[tv1-10]", gaps_out = 5, gaps_in = 3 })
 hl.workspace_rule({ workspace = "f[1]",      gaps_out = 5, gaps_in = 3 })
 
 -- ======= Layer Rules =======
+hl.layer_rule({
+  name = "noctalia",
+  match = {
+    namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd|window-switcher)$",
+  },
+  no_anim = true,
+  ignore_alpha = 0.5,
+  -- blur = true,
+  -- blur_popups = true,
+})
 -- hl.layer_rule({ match = { namespace = "logout_dialog" }, animation = "slide top" })
 -- hl.layer_rule({ match = { namespace = "waybar" },        animation = "popin 50%" })
 -- hl.layer_rule({ match = { namespace = "waybar" },        animation = "slide down" })
