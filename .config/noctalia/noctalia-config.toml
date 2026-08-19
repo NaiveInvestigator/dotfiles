@@ -1,0 +1,342 @@
+[audio]
+enable_overdrive = true
+
+[bar.default]
+background_opacity = 0.0
+capsule = true
+capsule_padding = 8.0
+center = [ "wallhaven", "media" ]
+end = [ "bar", "privacy", "brightness", "bluetooth", "group:g3", "network", "battery", "clock", "tray", "notifications" ]
+margin_ends = 3
+radius = 80
+shadow = false
+start = [ "session", "workspaces", "active_window", "group:g2" ]
+thickness = 42
+
+    [[bar.default.capsule_group]]
+    accordion = false
+    accordion_direction = "end"
+    enabled = true
+    fill = "surface_variant"
+    id = "g2"
+    members = [ "cpu", "temp", "network_rx" ]
+    opacity = 1.0
+    padding = 8.0
+
+    [[bar.default.capsule_group]]
+    accordion = false
+    accordion_direction = "end"
+    enabled = true
+    fill = "surface_variant"
+    id = "g3"
+    members = [ "volume", "audio_visualizer" ]
+    opacity = 1.0
+    padding = 8.0
+
+[config.custom_colors.blue]
+blend = true
+color = "#0000FF"
+
+[config.custom_colors.cyan]
+blend = true
+color = "#00FFFF"
+
+[config.custom_colors.green]
+blend = true
+color = "#00FF00"
+
+[config.custom_colors.magenta]
+blend = true
+color = "#FF00FF"
+
+[config.custom_colors.red]
+blend = true
+color = "#FF0000"
+
+[config.custom_colors.white]
+blend = true
+color = "#FFFFFF"
+
+[config.custom_colors.yellow]
+blend = true
+color = "#FFFF00"
+
+[control_center]
+sidebar_section = "none"
+
+[idle]
+pre_action_fade_seconds = 0
+
+[location]
+auto_locate = true
+
+[lockscreen]
+blurred_desktop = true
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@eDP-1",
+    "lockscreen-widget-0000000000000001",
+    "lockscreen-widget-0000000000000002",
+    "lockscreen-widget-0000000000000003",
+    "lockscreen-widget-0000000000000005",
+    "lockscreen-widget-0000000000000006",
+    "lockscreen-widget-0000000000000008"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 64
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 832.0
+    cx = 968.0
+    cy = 592.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 256.0
+    box_width = 560.0
+    cx = 832.0
+    cy = 252.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "clock"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 211.0
+    cy = 950.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "media_player"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 404.0
+    cy = 996.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "button"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
+        background = true
+        glyph = "heart"
+        variant = "default"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000005]
+    box_height = 160.0
+    box_width = 256.0
+    cx = 1256.0
+    cy = 300.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "sysmon"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000005.settings]
+        stat = "cpu_usage"
+        stat2 = "cpu_temp"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000006]
+    box_height = 80.0
+    box_width = 256.0
+    cx = 1256.0
+    cy = 164.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "weather"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000008]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 524.0
+    cy = 946.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "fancy_audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000008.settings]
+        background = false
+        visualization_mode = "bars_rings"
+
+[plugin_settings."h465855hgg/lyrics"]
+selector_placement = "floating"
+show_romanization = true
+show_translation = false
+translation_language = "en"
+
+[plugin_settings."icefish/phone-connect"]
+details_placement = "floating"
+
+[plugin_settings."kenn/keybind-cheatsheet"]
+compositor = "hyprland"
+hyprland_lua_config = "/home/maelstrom/.config/hypr/config/keybinds.lua"
+
+[plugin_settings."noctalia/wallhaven"]
+browser_open_near_click = true
+browser_placement = "floating"
+
+[plugins]
+enabled = [ "noctalia/wallhaven", "h465855hgg/lyrics", "icefish/phone-connect" ]
+
+[shell]
+avatar_path = "/home/maelstrom/.config/noctalia/profile.png"
+corner_radius_scale = 2.0
+external_ip_enabled = true
+password_style = "random"
+telemetry_enabled = true
+
+    [shell.launcher]
+    session_search = true
+
+    [shell.panel]
+    borders = false
+    control_center_placement = "floating"
+    open_near_click_clipboard = true
+    open_near_click_control_center = true
+    session_placement = "floating"
+    session_position = "center"
+    shadow = false
+    wallpaper_placement = "floating"
+
+    [shell.screenshot]
+    save_to_file = false
+
+[system.monitor]
+cpu_poll_seconds = 5
+
+[theme]
+community_palette = "Espresso Cream"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    community_ids = [ "zen-browser", "heroiclauncher" ]
+    enable_builtin_templates = false
+
+        [theme.templates.user.fastfetch]
+        input_path = "~/.config/matugen/templates/fastfetch.jsonc"
+        output_path = "~/.config/fastfetch/config.jsonc"
+
+        [theme.templates.user.gtk3]
+        input_path = "~/.config/matugen/templates/gtk-colors-new.css"
+        output_path = "~/.config/gtk-3.0/colors.css"
+        post_hook = "sleep 5;gsettings set org.gnome.desktop.interface gtk-theme \"\"; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark"
+
+        [theme.templates.user.gtk4]
+        input_path = "~/.config/matugen/templates/gtk-colors.css"
+        output_path = "~/.config/gtk-4.0/colors.css"
+
+        [theme.templates.user.hyprland]
+        input_path = "~/.config/matugen/templates/hyprland-colors.lua"
+        output_path = "~/.config/hypr/config/colors.lua"
+        post_hook = "hyprctl reload"
+
+        [theme.templates.user.kitty]
+        input_path = "~/.config/matugen/templates/kitty-colors.conf"
+        output_path = "~/.config/kitty/colors.conf"
+
+        [theme.templates.user.nvim]
+        input_path = "~/.config/nvim/pywal/matugen.lua"
+        output_path = "~/.cache/wal/base46-dark.lua"
+
+        [theme.templates.user.nvimlight]
+        input_path = "~/.config/nvim/pywal/matugen.lua"
+        output_path = "~/.cache/wal/base46-light.lua"
+
+        [theme.templates.user.pywal]
+        input_path = "~/.config/nvim/pywal/waltemplate"
+        output_path = "~/.cache/wal/colors"
+
+        [theme.templates.user.qt5ct]
+        input_path = "~/.config/matugen/templates/qtct-colors.conf"
+        output_path = "~/.config/qt5ct/colors/matugen.conf"
+
+        [theme.templates.user.qt6ct]
+        input_path = "~/.config/matugen/templates/qtct-colors.conf"
+        output_path = "~/.config/qt6ct/colors/matugen.conf"
+
+[wallpaper]
+directory = "/home/maelstrom/Pictures/"
+transition_on_startup = true
+
+    [wallpaper.automation]
+    enabled = true
+    interval_seconds = 350
+
+    [wallpaper.default]
+    path = "/home/maelstrom/Pictures/static_wallpapers/Bg080.JPG"
+
+    [wallpaper.last]
+    path = "/home/maelstrom/Pictures/static_wallpapers/Bg080.JPG"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/maelstrom/Pictures/static_wallpapers/Bg080.JPG"
+
+[widget.active_window]
+max_length = 150
+show_empty_label = true
+title_scroll = "on_hover"
+
+[widget.audio_visualizer]
+bands = 15
+interactive = false
+show_when_idle = true
+width = 100
+
+[widget.bar]
+type = "icefish/phone-connect:bar"
+
+[widget.battery]
+show_label = false
+
+[widget.brightness]
+show_label = false
+
+[widget.clock]
+format = "{:%I:%M:%S %p, %a, %b %d}"
+
+[widget.media.actions]
+right = "panel-toggle h465855hgg/lyrics:selector"
+
+[widget.notifications]
+anchor = true
+
+[widget.privacy]
+capsule = true
+hide_inactive = true
+
+[widget.volume]
+show_label = false
+
+[widget.wallhaven]
+type = "noctalia/wallhaven:wallhaven"
+
+[widget.workspaces]
+hide_when_empty = true
+show_labels = false
