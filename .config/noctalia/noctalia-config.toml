@@ -185,6 +185,7 @@ widget_order = [
 
 [plugin_settings."h465855hgg/lyrics"]
 selector_placement = "floating"
+selector_position = "top_center"
 show_romanization = true
 show_translation = false
 translation_language = "en"
@@ -290,13 +291,13 @@ transition_on_startup = true
     interval_seconds = 350
 
     [wallpaper.default]
-    path = "/home/maelstrom/Pictures/static_wallpapers/Bg080.JPG"
+    path = "/home/maelstrom/Pictures/static_wallpapers/evangelion-white.png"
 
     [wallpaper.last]
-    path = "/home/maelstrom/Pictures/static_wallpapers/Bg080.JPG"
+    path = "/home/maelstrom/Pictures/static_wallpapers/evangelion-white.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/maelstrom/Pictures/static_wallpapers/Bg080.JPG"
+    path = "/home/maelstrom/Pictures/static_wallpapers/evangelion-white.png"
 
 [widget.active_window]
 max_length = 150
