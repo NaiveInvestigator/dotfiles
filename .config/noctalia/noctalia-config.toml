@@ -97,6 +97,8 @@ widget_order = [
     cx = 968.0
     cy = 592.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "login_box"
 
@@ -122,6 +124,8 @@ widget_order = [
     cx = 832.0
     cy = 252.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "clock"
 
@@ -131,6 +135,8 @@ widget_order = [
     cx = 211.0
     cy = 950.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "media_player"
 
@@ -140,6 +146,8 @@ widget_order = [
     cx = 404.0
     cy = 996.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "button"
 
@@ -154,6 +162,8 @@ widget_order = [
     cx = 1256.0
     cy = 300.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "sysmon"
 
@@ -167,6 +177,8 @@ widget_order = [
     cx = 1256.0
     cy = 164.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "weather"
 
@@ -176,6 +188,8 @@ widget_order = [
     cx = 524.0
     cy = 946.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "fancy_audio_visualizer"
 
@@ -202,7 +216,7 @@ browser_open_near_click = true
 browser_placement = "floating"
 
 [plugins]
-enabled = [ "noctalia/wallhaven", "h465855hgg/lyrics", "icefish/phone-connect" ]
+enabled = [ "noctalia/wallhaven", "goatnath/spotify-lyrics", "icefish/phone-connect" ]
 
 [shell]
 avatar_path = "/home/maelstrom/.config/noctalia/profile.png"
@@ -212,6 +226,7 @@ password_style = "random"
 telemetry_enabled = true
 
     [shell.launcher]
+    fetch_exchange_rates = false
     session_search = true
 
     [shell.panel]
@@ -291,13 +306,13 @@ transition_on_startup = true
     interval_seconds = 350
 
     [wallpaper.default]
-    path = "/home/maelstrom/Pictures/static_wallpapers/evangelion-white.png"
+    path = "/home/maelstrom/Pictures/static_wallpapers/wallhaven-85pk82.png"
 
     [wallpaper.last]
-    path = "/home/maelstrom/Pictures/static_wallpapers/evangelion-white.png"
+    path = "/home/maelstrom/Pictures/static_wallpapers/wallhaven-85pk82.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/maelstrom/Pictures/static_wallpapers/evangelion-white.png"
+    path = "/home/maelstrom/Pictures/static_wallpapers/wallhaven-85pk82.png"
 
 [widget.active_window]
 max_length = 150
@@ -323,7 +338,7 @@ show_label = false
 format = "{:%I:%M:%S %p, %a, %b %d}"
 
 [widget.media.actions]
-right = "panel-toggle h465855hgg/lyrics:selector"
+right = "panel-toggle goatnath/spotify-lyrics:lyrics-panel"
 
 [widget.notifications]
 anchor = true
