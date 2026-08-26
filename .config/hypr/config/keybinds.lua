@@ -126,9 +126,9 @@ hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }), { descr
 hl.bind(mainMod .. " + slash",      hl.dsp.focus({ workspace = "previous" }), { description = "Switch to the previous workspace" })
 
 -- Special workspaces (scratchpads)
-hl.bind(mainMod .. " + minus",              hl.dsp.window.move({ workspace = "special" }),                            { description = "Move active window to Special workspace" })
+hl.bind(mainMod .. " + SHIFT + equal",              hl.dsp.window.move({ workspace = "special" }),                            { description = "Move active window to Special workspace" })
 hl.bind(mainMod .. " + equal",              hl.dsp.workspace.toggle_special("special"),                               { description = "Toggles the Special workspace" })
-hl.bind(mainMod .. " + F1",                 hl.dsp.workspace.toggle_special("scratchpad"),                            { description = "Call special workspace scratchpad" })
+-- hl.bind(mainMod .. " + F1",                 hl.dsp.workspace.toggle_special("scratchpad"),                            { description = "Call special workspace scratchpad" })
 hl.bind(mainMod .. " + ALT + SHIFT + F1",   hl.dsp.window.move({ workspace = "special:scratchpad", silent = true }), { description = "Move active window to special workspace scratchpad" })
 
 -- ======= Additional Settings =======
