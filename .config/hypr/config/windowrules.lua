@@ -43,8 +43,9 @@ hl.window_rule({ name = "windowrule-19", match = { title = "^(danmufloat|termflo
 hl.window_rule({ name = "windowrule-20", match = { class = "^(kitty|Alacritty)$" },      animation = "slide right" })
 hl.window_rule({ name = "windowrule-21", match = { class = "^(org.mozilla.firefox)$" },  no_blur  = true })
 
-hl.window_rule({ name = "windowrule-22", match = { class = "^(zen)$" },     opacity          = "0.80 0.80" })
-hl.window_rule({ name = "windowrule-23", match = { class = "(firefox)" },   fullscreen_state = "0 2", sync_fullscreen = false })
+hl.window_rule({ name = "windowrule-22", match = { class = "^(zen)$" },        opacity          = "0.80 0.80" })
+hl.window_rule({ name = "windowrule-23", match = { class = "^(helium)$" },     opacity          = "0.85 0.7" })
+hl.window_rule({ name = "windowrule-24", match = { class = "(firefox)" },      fullscreen_state = "0 2", sync_fullscreen = false })
 
 -- Decorations related to floating windows on workspaces 1 to 10
 hl.window_rule({ name = "windowrule-24",
