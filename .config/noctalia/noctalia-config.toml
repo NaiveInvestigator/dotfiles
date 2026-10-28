@@ -1,5 +1,6 @@
 [audio]
 enable_overdrive = true
+enable_screenshot_sounds = false
 
 [bar.default]
 background_opacity = 0.0
@@ -16,8 +17,9 @@ thickness = 42
     [[bar.default.capsule_group]]
     accordion = false
     accordion_direction = "end"
+    border_width = 1.0
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g2"
     members = [ "cpu", "temp", "network_rx" ]
     opacity = 1.0
@@ -26,8 +28,9 @@ thickness = 42
     [[bar.default.capsule_group]]
     accordion = false
     accordion_direction = "end"
+    border_width = 1.0
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g3"
     members = [ "volume", "audio_visualizer" ]
     opacity = 1.0
@@ -115,7 +118,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -344,15 +347,16 @@ transition_on_startup = true
     [wallpaper.automation]
     enabled = true
     interval_seconds = 350
+    recursive = true
 
     [wallpaper.default]
-    path = "/home/maelstrom/Pictures/static_wallpapers/wallhaven-k8kk7d.png"
+    path = "/home/maelstrom/Pictures/static_wallpapers/wallhaven-j3z29p.jpg"
 
     [wallpaper.last]
-    path = "/home/maelstrom/Pictures/static_wallpapers/wallhaven-k8kk7d.png"
+    path = "/home/maelstrom/Pictures/static_wallpapers/wallhaven-j3z29p.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/maelstrom/Pictures/static_wallpapers/wallhaven-k8kk7d.png"
+    path = "/home/maelstrom/Pictures/static_wallpapers/wallhaven-j3z29p.jpg"
 
 [widget.active_window]
 max_length = 150
@@ -396,3 +400,4 @@ type = "noctalia/wallhaven:wallhaven"
 [widget.workspaces]
 hide_when_empty = true
 show_labels = false
+show_tooltip = false
