@@ -257,6 +257,7 @@ clipboard_history_max_entries = 10
 corner_radius_scale = 2.0
 external_ip_enabled = true
 password_style = "random"
+polkit_agent = true
 telemetry_enabled = true
 
     [shell.launcher]
@@ -350,13 +351,13 @@ transition_on_startup = true
     recursive = true
 
     [wallpaper.default]
-    path = "/home/maelstrom/Pictures/static_wallpapers/wallhaven-j3z29p.jpg"
+    path = "/home/maelstrom/Pictures/static_wallpapers/Bg346.JPG"
 
     [wallpaper.last]
-    path = "/home/maelstrom/Pictures/static_wallpapers/wallhaven-j3z29p.jpg"
+    path = "/home/maelstrom/Pictures/static_wallpapers/Bg346.JPG"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/maelstrom/Pictures/static_wallpapers/wallhaven-j3z29p.jpg"
+    path = "/home/maelstrom/Pictures/static_wallpapers/Bg346.JPG"
 
 [widget.active_window]
 max_length = 150
