@@ -10,7 +10,8 @@ hl.config({
     general = {
         gaps_in     = 3,
         gaps_out    = 5,
-        border_size = 3,
+        border_size = 4,
+        resize_on_border = true,
         layout      = "dwindle", -- master|dwindle
 
         col = {
@@ -81,7 +82,6 @@ hl.config({
 -- See https://wiki.hyprland.org/0.45.0/Configuring/Dwindle-Layout/ for more
 hl.config({
     dwindle = {
-        special_scale_factor = 0.8,
         -- pseudotile           = true, -- master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
         preserve_split       = true,
     },
@@ -91,6 +91,5 @@ hl.config({
 hl.config({
     master = {
         new_status           = "master",
-        special_scale_factor = 0.8,
     },
 })
