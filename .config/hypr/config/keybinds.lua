@@ -23,8 +23,10 @@ hl.bind("CTRL + SPACE",         hl.dsp.exec_cmd(applauncher),                   
 -- ======= Screenshots =======
 hl.bind("PRINT",                hl.dsp.exec_cmd('grimblast copy output && notify-send "Screenshot copied to clipboard"'))
 -- hl.bind("PRINT",             hl.dsp.exec_cmd('grimblast save screen "$HOME/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png" && notify-send "Screenshot saved to Screenshot Folder"'))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("grimblast --freeze copy area"))
-hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd("grimblast --freeze save area - | tesseract stdin stdout | wl-copy"))
+-- hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("grimblast --freeze copy area"))
+-- hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd("grimblast --freeze save area - | tesseract stdin stdout | wl-copy"))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("noctalia msg screenshot-region --annotate"))
+hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd("noctalia msg screenshot-region --pipe-to-command --pipe-command 'tesseract stdin stdout | wl-copy'"))
 
 
 hl.bind(mainMod .. " + SHIFT + V",      hl.dsp.exec_cmd("noctalia msg panel-toggle clipboard"),                                           { description = "Shows Clipboard History" })
